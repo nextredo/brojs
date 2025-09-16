@@ -83,11 +83,6 @@ a:hover {
   text-decoration: underline;
 }
 
-pre {
-  overflow: auto;
-  padding: 1em;
-}
-
 pre code {
   padding: 0;
 }
@@ -101,9 +96,20 @@ table {
   width: 100%;
 }
 
-td, th {
-  padding: 1em;
+td,
+th {
   border: solid 1px;
+}
+
+td,
+th,
+pre {
+  padding: 1em;
+}
+
+pre,
+.katex {
+  overflow: auto;
 }
 
 figure {
