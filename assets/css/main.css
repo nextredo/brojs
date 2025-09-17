@@ -10,6 +10,9 @@ body {
   color: var(--fg1);
   font-family: sans-serif;
   line-height: 1.5;
+
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
 }
 
 header,
