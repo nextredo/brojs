@@ -98,7 +98,7 @@ Note that the [external `katex.css`][10] is loaded in the [`head.html` partial][
 [4]: https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-color-scheme
 [5]: https://gohugo.io/getting-started/quick-start/
 [6]: https://gohugo.io/content-management/syntax-highlighting/#noclasses
-[7]: https://git.andy.sb/nojs/blob/main/assets/css/style.css
+[7]: https://git.andy.sb/nojs/blob/main/assets/css/syntax.css
 [8]: https://gohugo.io/functions/transform/tomath/
 [9]: https://www.mathjax.org/
 [10]: https://katex.org/

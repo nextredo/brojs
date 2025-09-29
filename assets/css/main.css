@@ -23,7 +23,7 @@ code {
   background-color: var(--bg2);
 }
 
-nav,
+.navbar,
 main,
 .footer-content {
   width: 100%;
@@ -72,7 +72,16 @@ article:not(:last-of-type) {
   text-decoration: none;
 }
 
-p, li {
+:is(h1, h2, h3, h4, h5, h6) .anchor {
+  visibility: hidden;
+}
+
+:is(h1, h2, h3, h4, h5, h6):hover .anchor {
+  visibility: visible;
+}
+
+p,
+li {
   text-align: justify;
   hyphens: auto;
 }
