@@ -21,3 +21,15 @@ title = "BroJS Hugo Theme"
     name = 'Tags'
     pageRef = '/tags'
     weight = 3
+
+
+# Custom parameters
+[params]
+  repo_url = "https://github.com/nextredo/brojs"
+
+  # The licensing of your website
+  [params.license]
+    copyright = "other"
+    name = "AGPLv3"
+    link = "https://www.gnu.org/licenses/agpl-3.0.en.html"
+    image = "imgs/lics/agplv3-155x51.png"

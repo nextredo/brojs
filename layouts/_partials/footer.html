@@ -1,3 +1,19 @@
 <div class="footer-content">
-  <p>Copyright {{ now.Year }}. All rights reserved.</p>
+  {{ if eq .Site.Params.license.copyright "all-rights" }}
+    <div>Copyright {{ now.Year }}. All rights reserved.</div>
+    {{ else if eq .Site.Params.license.copyright "other" }}
+    <a href="{{ .Site.Params.license.link }}">
+      <div>
+        This website is licensed as {{ .Site.Params.license.name }}.
+        <img src="{{ .Site.Params.license.image | absURL }}" style="padding: 0; display: inline-block; vertical-align: middle; height: 1em; width: auto;"/>
+      </div>
+    </a>
+  {{ else }}
+  {{ end }}
+  {{ if .Site.Params.repo_url }}
+    <a href="{{ .Site.Params.repo_url }}">
+      <div>Find this website's code and license here.</div>
+    </a>
+    {{ end }}
+  <div>Last updated: {{ .Site.Lastmod | time.Format ":date_medium" }}</div>
 </div>
