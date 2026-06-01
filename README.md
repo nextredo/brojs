@@ -1,7 +1,11 @@
-# noJS Hugo theme
+# broJS Hugo theme
 
-A minimal, no-JavaScript theme for the [Hugo][1] static site generator.
-Check out the demo at [nojs.andy.sb][2].
+> [!NOTE]
+> This repo is based off the "noJS" theme by Andy Sukowski-Bang \
+> Find that theme here: <https://gitlab.com/andy.sb/nojs>
+
+A minimal, no-JavaScript theme for the [Hugo][1] static site generator. \
+Check out the demo at <https://nextredo.github.io/brojs>
 
 ![noJS theme screenshot][3]
 
