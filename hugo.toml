@@ -1,3 +1,19 @@
 [module]
   [module.hugoVersion]
     min = "0.146.0"
+
+[menus]
+  [[menus.main]]
+    name = 'Home'
+    pageRef = '/'
+    weight = 1
+
+  [[menus.main]]
+    name = 'Posts'
+    pageRef = '/posts'
+    weight = 2
+
+  [[menus.main]]
+    name = 'Tags'
+    pageRef = '/tags'
+    weight = 3

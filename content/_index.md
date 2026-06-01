@@ -2,7 +2,6 @@
 title = "Home"
 date = 2026-06-01T14:42:37+10:00
 draft = false
-weight = 1
 +++
 
-Test 🦀
+Home 🦀
