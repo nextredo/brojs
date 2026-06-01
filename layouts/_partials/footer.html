@@ -4,9 +4,12 @@
       <div>Copyright {{ now.Year }}. All rights reserved.</div>
     {{ else if eq .copyright "other" }}
       <div>
-        <a href="{{ .link }}">
-          This website is licensed as {{ .name }}.
-        </a>
+        {{ $lic_text := printf "This website is licensed as %s." .name }}
+        {{ with .link }}
+          <a href="{{ .}}">{{ $lic_text }}</a>
+        {{ else }}
+          {{ $lic_text }}
+        {{ end }}
         {{ with .image }}
           <img class="footer-image" src="{{ . | relURL }}"/>
         {{ end }}
