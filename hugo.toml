@@ -1,3 +1,7 @@
+# Hugo configuration
+baseURL = "https://nextredo.github.io/brojs/"
+title = "BroJS Hugo Theme"
+
 [module]
   [module.hugoVersion]
     min = "0.146.0"
