@@ -22,6 +22,11 @@ title = "BroJS Hugo Theme"
     pageRef = '/tags'
     weight = 3
 
+  [[menus.main]]
+    name = "About"
+    pageRef = "/about/"
+    weight = 4
+
 
 # Custom parameters
 [params]
@@ -32,4 +37,5 @@ title = "BroJS Hugo Theme"
     copyright = "other"
     name = "AGPLv3"
     link = "https://www.gnu.org/licenses/agpl-3.0.en.html"
-    image = "imgs/lics/agplv3-155x51.png"
+    # Important to *NOT* have a leading "/" in the image path
+    image = "images/agplv3-license.png"
