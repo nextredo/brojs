@@ -6,7 +6,7 @@
       <a href="{{ .link }}">
         <div>
           This website is licensed as {{ .name }}.
-          <img src="{{ .image | absURL }}" style="padding: 0; display: inline-block; vertical-align: middle; height: 1em; width: auto;"/>
+          <img class="footer-image" src="{{ .image | absURL }}"/>
         </div>
       </a>
     {{ else }}

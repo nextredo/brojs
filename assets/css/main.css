@@ -47,6 +47,14 @@ main {
   justify-content: center;
 }
 
+.footer-image {
+  padding: 0;
+  display: inline-block;
+  vertical-align: middle;
+  height: 1em;
+  width: auto;
+}
+
 article {
   margin-top: 2em;
 }
