@@ -2,6 +2,11 @@
 baseURL = "https://nextredo.github.io/brojs/"
 title = "BroJS Hugo Theme"
 
+# Copyright notice to show at the bottom of the page
+# copyright = "© {{ now.Year }}. All rights reserved."
+# copyright = "© 2026. All rights reserved."
+copyright = "This website is licensed as AGPLv3."
+
 [module]
   [module.hugoVersion]
     min = "0.146.0"
@@ -32,10 +37,9 @@ title = "BroJS Hugo Theme"
 [params]
   repo_url = "https://github.com/nextredo/brojs"
 
-  # The licensing of your website
+  # Supplementary copyright license information
   [params.license]
-    copyright = "other"
-    name = "AGPLv3"
+    # Printf format string, %s substituted for license name (if present)
     link = "https://www.gnu.org/licenses/agpl-3.0.en.html"
     # Important to *NOT* have a leading "/" in the image path
     image = "images/agplv3-license.png"

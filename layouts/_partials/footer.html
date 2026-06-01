@@ -1,25 +1,22 @@
 <div class="footer-content">
   {{ with .Site.Params.license }}
-    {{ if eq .copyright "all-rights" }}
-      <div>Copyright {{ now.Year }}. All rights reserved.</div>
-    {{ else if eq .copyright "other" }}
-      <div>
-        {{ $lic_text := printf "This website is licensed as %s." .name }}
+    <div>
+      {{ $lic_text := $.Site.Copyright }}
+      {{ if $lic_text }}
         {{ with .link }}
-          <a href="{{ .}}">{{ $lic_text }}</a>
+          <a href="{{ . }}">{{ $lic_text }}</a>
         {{ else }}
           {{ $lic_text }}
         {{ end }}
-        {{ with .image }}
-          <img class="footer-image" src="{{ . | relURL }}"/>
-        {{ end }}
-      </div>
-    {{ else }}
-    {{ end }}
+      {{ end }}
+      {{ with .image }}
+        <img class="footer-image" src="{{ . | relURL }}"/>
+      {{ end }}
+    </div>
   {{ end }}
   {{ with .Site.Params.repo_url }}
     <a href="{{ . }}">
-      <div>Find this website's code and license here.</div>
+      Find this website's code and license here.
     </a>
   {{ end }}
   <div>Last updated: {{ .Site.Lastmod | time.Format ":date_medium" }}</div>
