@@ -1,19 +1,21 @@
 <div class="footer-content">
-  {{ if eq .Site.Params.license.copyright "all-rights" }}
-    <div>Copyright {{ now.Year }}. All rights reserved.</div>
-    {{ else if eq .Site.Params.license.copyright "other" }}
-    <a href="{{ .Site.Params.license.link }}">
-      <div>
-        This website is licensed as {{ .Site.Params.license.name }}.
-        <img src="{{ .Site.Params.license.image | absURL }}" style="padding: 0; display: inline-block; vertical-align: middle; height: 1em; width: auto;"/>
-      </div>
-    </a>
-  {{ else }}
+  {{ with .Site.Params.license }}
+    {{ if eq .copyright "all-rights" }}
+      <div>Copyright {{ now.Year }}. All rights reserved.</div>
+    {{ else if eq .copyright "other" }}
+      <a href="{{ .link }}">
+        <div>
+          This website is licensed as {{ .name }}.
+          <img src="{{ .image | absURL }}" style="padding: 0; display: inline-block; vertical-align: middle; height: 1em; width: auto;"/>
+        </div>
+      </a>
+    {{ else }}
+    {{ end }}
   {{ end }}
-  {{ if .Site.Params.repo_url }}
-    <a href="{{ .Site.Params.repo_url }}">
+  {{ with .Site.Params.repo_url }}
+    <a href="{{ . }}">
       <div>Find this website's code and license here.</div>
     </a>
-    {{ end }}
+  {{ end }}
   <div>Last updated: {{ .Site.Lastmod | time.Format ":date_medium" }}</div>
 </div>
