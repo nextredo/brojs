@@ -16,8 +16,8 @@
   {{ end }}
   {{ with .Site.Params.repo_url }}
     <a href="{{ . }}">
-      Find this website's code and license here.
+      Find this website's code here.
     </a>
   {{ end }}
-  <div>Last updated: {{ .Site.Lastmod | time.Format ":date_medium" }}</div>
+  <div>Site last updated: {{ .Site.Lastmod | time.Format ":date_medium" }}</div>
 </div>

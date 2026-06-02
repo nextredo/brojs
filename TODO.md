@@ -10,7 +10,6 @@
 - [ ] Custom tooltip stuff
 - [ ] Clicking an image opens it as just an image in a new tab?
 - [ ] Move example site stuff to exampleSite subdir for my DIY theme
-- [ ] Clean up footer image in nojs theme
-  - Put styling into its own CSS class
 - [ ] Document theme toml options
 - [ ] Word count how long this takes to read
+- [ ] Use HTML `<details>` element for something
