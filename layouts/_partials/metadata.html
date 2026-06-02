@@ -9,11 +9,7 @@
       &mdash;
     {{- end }}
     {{- with .Params.tags }}
-      <ul class="tags">
-        {{ range . | sort }}
-          <li><a href="{{ path.Join ("tags/" | relLangURL) (.) }}">#{{ . }}</a></li>
-        {{ end }}
-      </ul>
+      {{ partial "tags.html" . }}
     {{- end }}
     <br>
     <ul class="tags">
