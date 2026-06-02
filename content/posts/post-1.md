@@ -2,7 +2,6 @@
 date = "2026-06-02T09:36:05+10:00"
 draft = false
 title = "Example Post 1"
-weight = 1
 description = "A post to demonstrate this theme's stylin' 😎"
 summary = "A collection of common placeholder texts. 1st place goes to \"Hello, World!\"."
 tags = ["tag-1", "orange"]
