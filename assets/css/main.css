@@ -143,3 +143,15 @@ figcaption {
   color: var(--fg2);
   text-align: center;
 }
+
+#TableOfContents ul {
+  font-style: italic;
+  list-style-type: none;
+  padding-left: 1em;
+  padding-top: 0em;
+  margin-top: 0em;
+}
+
+#TableOfContents li a {
+  text-decoration: none;
+}

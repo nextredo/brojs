@@ -1,5 +1,23 @@
 {{ define "main" }}
   <h1>{{ .Title }}</h1>
   {{ partial "metadata.html" . }}
-  {{ .Content }}
+  {{- if .Summary }}
+    <summary>
+      <p>
+        <b>TL;DR:</b>
+        {{ .Summary }}
+      </p>
+    </summary>
+  {{- end }}
+  {{ if or (and (gt .WordCount 400) (ne .Params.toc false)) (eq .Params.toc true) }}
+    {{ with .Params.toc }}
+      <aside>
+        <b>Table of Contents:</b>
+        {{ $.TableOfContents }}
+      </aside>
+    {{ end }}
+  {{ end }}
+  <article>
+    {{ .Content }}
+  </article>
 {{ end }}

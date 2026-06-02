@@ -9,6 +9,7 @@ tags = ["tag-1", "orange"]
 
 [params]
   author = "John Doe"
+  toc = true
 +++
 
 # Top 2 Placeholder Texts
