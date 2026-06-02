@@ -65,7 +65,7 @@ article:not(:last-of-type) {
   margin: 1em 0;
 }
 
-.tags {
+.tags, .info {
   list-style: none;
   display: inline-flex;
   gap: 0.5em;
