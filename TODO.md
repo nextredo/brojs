@@ -13,3 +13,4 @@
 - [ ] Document theme toml options
 - [ ] Word count how long this takes to read
 - [ ] Use HTML `<details>` element for something
+- [ ] sitemap
