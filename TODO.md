@@ -1,6 +1,10 @@
 # To Do
 - [ ] Customisable favicon in theme
 
+## Other
+- [ ] `go.mod` file so it can be used as a Hugo module
+- [ ] Move all demo site stuff into the `exampleSite` subdir
+
 ## Customisation / Theming
 - [ ] Custom fire cursor on the website
   - [ ] Keyboard shortcut to disable the cursor
@@ -9,7 +13,6 @@
 - [ ] Brain made / human made (Not AI) mark
 - [ ] Custom tooltip stuff
 - [ ] Clicking an image opens it as just an image in a new tab?
-- [ ] Move example site stuff to exampleSite subdir for my DIY theme
 - [ ] Document theme toml options
 - [ ] Word count how long this takes to read
 - [ ] Use HTML `<details>` element for something

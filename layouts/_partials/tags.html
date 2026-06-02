@@ -1,7 +1,7 @@
-{{- with . }}
+{{- with . -}}
 <ul class="tags">
   {{ range . | sort }}
     <li><a href="{{ path.Join ("tags/" | relLangURL) (.) }}">#{{ . }}</a></li>
   {{ end }}
 </ul>
-{{- end }}
+{{- end -}}

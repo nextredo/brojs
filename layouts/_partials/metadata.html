@@ -1,16 +1,16 @@
-{{- if or .Date .Params.tags }}
+{{ if or .Date .Params.tags }}
   <div class="metadata">
-    {{- with .Date }}
+    {{- with .Date -}}
       {{ $dateMachine := . | time.Format "2006-01-02T15:04:05-07:00" }}
       {{ $dateHuman := . | time.Format ":date_long" }}
       <time datetime="{{ $dateMachine }}">{{ $dateHuman }}</time>
-    {{- end }}
-    {{- if and .Date .Params.tags }}
-      &mdash;
-    {{- end }}
-    {{- with .Params.tags }}
-      {{ partial "tags.html" . }}
-    {{- end }}
+    {{- end -}}
+    {{- if and .Date .Params.tags -}}
+      <span>&nbsp;&mdash;&nbsp;</span>
+    {{- end -}}
+    {{- with .Params.tags -}}
+      {{- partial "tags.html" . -}}
+    {{- end -}}
     <br>
     <ul class="info">
       <li>📖 {{ .ReadingTime }} min read</li>
@@ -18,4 +18,4 @@
       <li>📊 {{ .WordCount }} words</li>
     </ul>
   </div>
-{{- end}}
+{{ end }}
