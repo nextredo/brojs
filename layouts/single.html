@@ -9,7 +9,8 @@
       </p>
     </details>
   {{- end }}
-  {{ if or (and (gt .WordCount 400) (ne .Params.toc false)) (eq .Params.toc true) }}
+  {{ $auto_toc := and (gt .WordCount 400) (ne .Params.toc false) }}
+  {{ if or ($auto_toc) (eq .Params.toc true) }}
     {{ with .Params.toc }}
       <aside>
         <b>Table of Contents:</b>
