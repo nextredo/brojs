@@ -144,6 +144,15 @@ figcaption {
   text-align: center;
 }
 
+details {
+  cursor: pointer;
+}
+
+aside {
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
 /* Hugo automatically assigns
 the below ID to the TOC element */
 #TableOfContents ul {
@@ -152,6 +161,7 @@ the below ID to the TOC element */
   padding-left: 1em;
   padding-top: 0em;
   margin-top: 0em;
+  margin-bottom: 0em;
 }
 
 #TableOfContents li a {
