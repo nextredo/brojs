@@ -16,8 +16,10 @@
       </ul>
     {{- end }}
     <br>
-    <span>📖 {{ .ReadingTime }} min read</span>
-    <span>•</span>
-    <span>📊 {{ .WordCount }} words</span>
+    <ul class="tags">
+      <li>📖 {{ .ReadingTime }} min read</li>
+      <li>•</li>
+      <li>📊 {{ .WordCount }} words</li>
+    </ul>
   </div>
 {{- end}}

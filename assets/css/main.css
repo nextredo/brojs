@@ -144,6 +144,8 @@ figcaption {
   text-align: center;
 }
 
+/* Hugo automatically assigns
+the below ID to the TOC element */
 #TableOfContents ul {
   font-style: italic;
   list-style-type: none;
