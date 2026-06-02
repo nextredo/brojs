@@ -42,8 +42,14 @@ main {
 
 .footer-content {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
+}
+
+.footer-image {
+  height: 1em;
+  width: auto;
 }
 
 article {
@@ -136,4 +142,35 @@ figcaption {
   margin-top: 1em;
   color: var(--fg2);
   text-align: center;
+}
+
+details {
+  cursor: pointer;
+}
+
+aside {
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+hr {
+  border: none;
+  border-top-style: dotted;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Hugo automatically assigns
+the below ID to the TOC element */
+#TableOfContents ul {
+  font-style: italic;
+  list-style-type: none;
+  padding-left: 1em;
+  padding-top: 0em;
+  margin-top: 0em;
+  margin-bottom: 0em;
+}
+
+#TableOfContents li a {
+  text-decoration: none;
 }
