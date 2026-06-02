@@ -153,6 +153,13 @@ aside {
   margin-bottom: 1em;
 }
 
+hr {
+  border: none;
+  border-top-style: dotted;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 /* Hugo automatically assigns
 the below ID to the TOC element */
 #TableOfContents ul {
