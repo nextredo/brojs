@@ -1,6 +1,6 @@
 # Hugo configuration
 baseURL = "https://nextredo.github.io/brojs/"
-title = "BroJS Hugo Theme"
+title = "broJS Hugo Theme"
 
 # Copyright notice to show at the bottom of the page
 # copyright = "© {{ now.Year }}. All rights reserved."
