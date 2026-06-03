@@ -1,22 +1,15 @@
 {{ define "main" }}
   <h1>{{ .Title }}</h1>
-  <!-- TODO add description?? -->
   <ul class="terms-tags">
     {{- $type := .Type }}
-    <!-- TODO change to .ByCount -->
     {{- range $key, $value := .Data.Terms.Alphabetical }}
       {{- $name := .Name }}
       {{- $count := .Count }}
-    <!-- TODO ideally don't have to printf
-         would be good to path.Join or just . instead
-         also use .RelPermalink pls -->
-      {{- with site.GetPage (printf "/%s/%s" $type $name) }}
+      {{- with site.GetPage (path.Join $type $name) }}
         <li>
-          <a href="{{ .Permalink }}">
-            {{ .LinkTitle }}
-            <sup><strong><sup>
-              {{ $count }}
-            </sup></strong></sup>
+          <a href="{{ .RelPermalink }}">
+            {{ $name }}
+            <sup>{{ $count }}</sup>
           </a>
         </li>
       {{- end }}

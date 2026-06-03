@@ -1,11 +1,10 @@
 {{ define "main" }}
   <h1>Posts tagged with "{{ .Title }}"</h1>
   <p>Found {{ .Pages | len }} {{ if eq (.Pages | len) 1 }}post{{ else }}posts{{ end }} with this tag.</p>
-
   <ul>
     {{- range .Pages }}
       <li>
-        <a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a>
+        <a href="{{ .RelPermalink }}">{{ .Title }}</a>
       </li>
     {{- end }}
   </ul>
