@@ -7,11 +7,9 @@
   <meta name="description" content="{{ .Description | plainify }}">
 {{- end }}
 
-{{- $styles := slice "css/vars.css" "css/syntax.css" "css/main.css" "css/nav.css" -}}
+{{- $styles := resources.Match "css/*.css" }}
 {{- range $styles }}
-  {{- with resources.Get . }}
-    <link rel="stylesheet" href="{{ .RelPermalink }}">
-  {{- end }}
+   <link rel="stylesheet" href="{{ .RelPermalink }}">
 {{- end }}
 
 {{ $noop := .WordCount }}
