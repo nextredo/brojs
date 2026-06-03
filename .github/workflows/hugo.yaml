@@ -47,3 +47,6 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./public
           publish_branch: gh-pages
+
+      - name: Generate homepage screenshot
+        run: .github/workflows/screenshotter.sh
