@@ -1,0 +1,16 @@
+{{ if eq .Type "alert" }}
+  <blockquote class="alert alert-type-{{ .AlertType }}">
+    <p class="alert-title">
+      {{ if .AlertTitle }}
+        {{ .AlertTitle }}
+      {{ else }}
+        {{ title .AlertType }}
+      {{ end }}
+    </p>
+    <p class="alert-content">
+      {{- .Text -}}
+    </p>
+  </blockquote>
+{{ else }}
+  <blockquote>{{ .Text }}</blockquote>
+{{ end }}

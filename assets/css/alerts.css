@@ -1,0 +1,45 @@
+/* This file provides GitHub Flavoured Markdown alert styling. */
+
+blockquote {
+  color: var(--fg2);
+  border-left: 0.25em solid;
+  padding: 0 1em;
+  margin: 0 0;
+}
+
+.alert {
+ --note-colour: #1f6feb;
+ --tip-colour: #238636;
+ --important-colour: #8957e5;
+ --warning-colour: #9e6a03;
+ --caution-colour: #da3633;
+ background-color: var(--bg2);
+}
+
+.alert-type-note {
+ border-left-color: var(--note-colour);
+}
+
+.alert-type-tip {
+ border-left-color: var(--tip-colour);
+}
+
+.alert-type-important {
+ border-left-color: var(--important-colour);
+}
+
+.alert-type-warning {
+ border-left-color: var(--warning-colour);
+}
+
+.alert-type-caution {
+ border-left-color: var(--caution-colour);
+}
+
+.alert-title {
+
+}
+
+.alert-content {
+
+}

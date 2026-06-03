@@ -31,8 +31,8 @@ I think these were missed by the resources above. \
 It indicates other things may have been missed too.
 
 ## Alerts
-> [!INFORMATION]
-> Information here
+> Regular blockquote \
+> Just a normal blockquote
 
 > [!NOTE]
 > Notes here
