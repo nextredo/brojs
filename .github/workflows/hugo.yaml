@@ -51,12 +51,12 @@ jobs:
       - name: Generate homepage screenshot
         run: |
           # Install dependencies
-          apt update
-          apt install -y nodejs npm
+          sudo apt-get update
+          sudo apt-get install -y nodejs npm
 
           # Install Puppeteer
-          mkdir my-puppeteer-app && cd my-puppeteer-app
-          npm init -y
+          # mkdir my-puppeteer-app && cd my-puppeteer-app
+          # npm init -y
           npm install -g puppeteer
 
           # Install chromium
