@@ -8,32 +8,32 @@ blockquote {
 }
 
 .alert {
- --note-colour: #1f6feb;
- --tip-colour: #238636;
- --important-colour: #8957e5;
- --warning-colour: #9e6a03;
- --caution-colour: #da3633;
- background-color: var(--bg2);
+  --note-colour: #1f6feb;
+  --tip-colour: #238636;
+  --important-colour: #8957e5;
+  --warning-colour: #9e6a03;
+  --caution-colour: #da3633;
+  background-color: var(--bg2);
 }
 
 .alert-type-note {
- border-left-color: var(--note-colour);
+  border-left-color: var(--note-colour);
 }
 
 .alert-type-tip {
- border-left-color: var(--tip-colour);
+  border-left-color: var(--tip-colour);
 }
 
 .alert-type-important {
- border-left-color: var(--important-colour);
+  border-left-color: var(--important-colour);
 }
 
 .alert-type-warning {
- border-left-color: var(--warning-colour);
+  border-left-color: var(--warning-colour);
 }
 
 .alert-type-caution {
- border-left-color: var(--caution-colour);
+  border-left-color: var(--caution-colour);
 }
 
 .alert-title {
