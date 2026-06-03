@@ -1,0 +1,194 @@
+<!doctype html><html lang=en dir=ltr><head><meta charset=utf-8><link rel=icon type=image/x-icon href=https://nextredo.github.io/brojs/favicon.ico><meta name=mobile-web-app-capable content="yes"><meta name=viewport content="width=device-width,initial-scale=1,initial-scale=1,shrink-to-fit=no"><title>All Markdown Constructs | broJS Hugo Theme</title><meta name=description content="All Markdown, CommonMark and Github Flavoured Markdown constructs - to demonstrate this theme."><link rel=stylesheet href=/brojs/css/alerts.css><link rel=stylesheet href=/brojs/css/main.css><link rel=stylesheet href=/brojs/css/nav.css><link rel=stylesheet href=/brojs/css/syntax.css><link rel=stylesheet href=/brojs/css/vars.css></head><body><header><nav class=navbar><p>broJS Hugo Theme</p><label for=dropdown><svg height="20" fill="currentColor" viewBox="0 0 640 640"><title>Menu</title><path d="M96 160c0-17.7 14.3-32 32-32H512c17.7.0 32 14.3 32 32s-14.3 32-32 32H128c-17.7.0-32-14.3-32-32zm0 160c0-17.7 14.3-32 32-32H512c17.7.0 32 14.3 32 32s-14.3 32-32 32H128c-17.7.0-32-14.3-32-32zM544 480c0 17.7-14.3 32-32 32H128c-17.7.0-32-14.3-32-32s14.3-32 32-32H512c17.7.0 32 14.3 32 32z"/></svg>
+</label><input type=checkbox id=dropdown checked><ul><li><a href=/brojs/>Home</a></li><li><a aria-current=page class=active href=/brojs/posts/>Posts</a></li><li><a href=/brojs/tags/>Tags</a></li><li><a href=/brojs/about/>About</a></li></ul></nav></header><main><h1>All Markdown Constructs</h1><div class=metadata><time datetime=2026-06-03T20:46:42+10:00>June 3, 2026</time><span>&nbsp;&mdash;&nbsp;</span><ul class=tags><li><a href=/brojs/tags/CommonMark>#CommonMark</a></li><li><a href=/brojs/tags/GithubFlavouredMarkdown>#GithubFlavouredMarkdown</a></li><li><a href=/brojs/tags/Goldmark>#Goldmark</a></li></ul><br><ul class=info><li>📖 8 min read</li><li>•</li><li>📊 1679 words</li></ul></div><details><summary><b>TL;DR</b></summary><p>This post contains many of the features from the markdown specs supported by Hugo.
+It probably doesn&rsquo;t have it all.
+Use it to see what everything looks like with this theme.</p></details><aside><b>Table of Contents:</b><nav id=TableOfContents><ul><li><a href=#alerts>Alerts</a></li></ul><ul><li><ul><li></li></ul></li><li><a href=#headers>Headers</a></li></ul><ul><li><a href=#h2>H2</a><ul><li><a href=#h3>H3</a></li></ul></li></ul><ul><li><a href=#alt-h2>Alt-H2</a></li><li><a href=#emphasis>Emphasis</a></li><li><a href=#lists>Lists</a></li><li><a href=#links>Links</a></li><li><a href=#images>Images</a></li><li><a href=#code-and-syntax-highlighting>Code and Syntax Highlighting</a></li><li><a href=#footnotes>Footnotes</a></li><li><a href=#tables>Tables</a></li><li><a href=#blockquotes>Blockquotes</a></li><li><a href=#inline-html>Inline HTML</a></li><li><a href=#horizontal-rule>Horizontal Rule</a></li><li><a href=#line-breaks>Line Breaks</a></li><li><a href=#youtube-videos>YouTube Videos</a></li></ul></nav></aside><hr><article><h1 id=markdown--hugo>Markdown & Hugo
+<a href=#markdown--hugo class=anchor>#</a></h1><p><a href=https://gohugo.io/>Hugo</a> sites can use content formatted as <a href=https://daringfireball.net/projects/markdown/>Markdown</a>.
+The Markdown specifications it complies with are:</p><ul><li><a href=https://github.github.com/gfm/>Github Flavoured Markdown</a></li><li><a href=https://spec.commonmark.org/current/>CommonMark Markdown</a></li></ul><p>In case this has changed since writing the above, you can <a href=https://gohugo.io/content-management/formats/#markdown>read about it here</a>.</p><p>In any case, this post has a bunch of markdown constructs in it, so you can see how this theme looks.</p><h1 id=extra-bits>Extra Bits
+<a href=#extra-bits class=anchor>#</a></h1><p>I think these were missed by the resources above.<br>It indicates other things may have been missed too.</p><h2 id=alerts>Alerts
+<a href=#alerts class=anchor>#</a></h2><blockquote><p>Regular blockquote</p><p>Just a normal blockquote<br>Read about Hugo alerts <a href=https://gohugo.io/render-hooks/blockquotes/#alerts>here</a></p></blockquote><blockquote class="alert alert-type-note"><p class=alert-title>ℹ️
+Take note&mldr;</p><p><p>Notes here</p></p></blockquote><blockquote class="alert alert-type-tip"><p class=alert-title>💡
+Take a hint&mldr;</p><p><p>Tips here</p></p></blockquote><blockquote class="alert alert-type-important"><p class=alert-title>❕
+Listen up!</p><p><p>Important stuff here</p></p></blockquote><blockquote class="alert alert-type-warning"><p class=alert-title>⚠️
+Here be dragons&mldr;</p><p><p>Warnings here</p></p></blockquote><blockquote class="alert alert-type-caution"><p class=alert-title>🛑️
+Oh yeah and before I forget&mldr;</p><p><p>Cautionary tales here</p></p></blockquote><h1 id=github-flavoured-markdown>GitHub Flavoured Markdown
+<a href=#github-flavoured-markdown class=anchor>#</a></h1><blockquote class="alert alert-type-note"><p class=alert-title>ℹ️
+Note</p><p><p>Sample/example/cheatsheet taken from <a href=https://github.com/adam-p/markdown-here/wiki/markdown-cheatsheet>here</a>.<br>I&rsquo;m pretty sure this doesn&rsquo;t have everything.</p></p></blockquote><p>This is intended as a quick reference and showcase. For more complete info, see <a href=http://daringfireball.net/projects/markdown/>John Gruber&rsquo;s original spec</a> and the <a href=http://github.github.com/github-flavored-markdown/>Github-flavored Markdown info page</a>.</p><p>Note that there is also a <a href=./Markdown-Here-Cheatsheet>Cheatsheet specific to Markdown Here</a> if that&rsquo;s what you&rsquo;re looking for. You can also check out <a href=./Other-Markdown-Tools>more Markdown tools</a>.</p><h5 id=table-of-contents>Table of Contents
+<a href=#table-of-contents class=anchor>#</a></h5><p><a href=#headers>Headers</a>
+<a href=#emphasis>Emphasis</a>
+<a href=#lists>Lists</a>
+<a href=#links>Links</a>
+<a href=#images>Images</a>
+<a href=#code>Code and Syntax Highlighting</a>
+<a href=#footnotes>Footnotes</a>
+<a href=#tables>Tables</a>
+<a href=#blockquotes>Blockquotes</a>
+<a href=#html>Inline HTML</a>
+<a href=#hr>Horizontal Rule</a>
+<a href=#lines>Line Breaks</a>
+<a href=#videos>YouTube Videos</a></p><h2 id=headers>Headers
+<a href=#headers class=anchor>#</a></h2><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-no-highlight data-lang=no-highlight><span style=display:flex><span># H1
+</span></span><span style=display:flex><span>## H2
+</span></span><span style=display:flex><span>### H3
+</span></span><span style=display:flex><span>#### H4
+</span></span><span style=display:flex><span>##### H5
+</span></span><span style=display:flex><span>###### H6
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>Alternatively, for H1 and H2, an underline-ish style:
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>Alt-H1
+</span></span><span style=display:flex><span>======
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>Alt-H2
+</span></span><span style=display:flex><span>------
+</span></span></code></pre></div><h1 id=h1>H1
+<a href=#h1 class=anchor>#</a></h1><h2 id=h2>H2
+<a href=#h2 class=anchor>#</a></h2><h3 id=h3>H3
+<a href=#h3 class=anchor>#</a></h3><h4 id=h4>H4
+<a href=#h4 class=anchor>#</a></h4><h5 id=h5>H5
+<a href=#h5 class=anchor>#</a></h5><h6 id=h6>H6
+<a href=#h6 class=anchor>#</a></h6><p>Alternatively, for H1 and H2, an underline-ish style:</p><h1 id=alt-h1>Alt-H1
+<a href=#alt-h1 class=anchor>#</a></h1><h2 id=alt-h2>Alt-H2
+<a href=#alt-h2 class=anchor>#</a></h2><h2 id=emphasis>Emphasis
+<a href=#emphasis class=anchor>#</a></h2><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-no-highlight data-lang=no-highlight><span style=display:flex><span>Emphasis, aka italics, with *asterisks* or _underscores_.
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>Strong emphasis, aka bold, with **asterisks** or __underscores__.
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>Combined emphasis with **asterisks and _underscores_**.
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>Strikethrough uses two tildes. ~~Scratch this.~~
+</span></span></code></pre></div><p>Emphasis, aka italics, with <em>asterisks</em> or <em>underscores</em>.</p><p>Strong emphasis, aka bold, with <strong>asterisks</strong> or <strong>underscores</strong>.</p><p>Combined emphasis with <strong>asterisks and <em>underscores</em></strong>.</p><p>Strikethrough uses two tildes. <del>Scratch this.</del></p><h2 id=lists>Lists
+<a href=#lists class=anchor>#</a></h2><p>(In this example, leading and trailing spaces are shown with with dots: ⋅)</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-no-highlight data-lang=no-highlight><span style=display:flex><span>1. First ordered list item
+</span></span><span style=display:flex><span>2. Another item
+</span></span><span style=display:flex><span>⋅⋅⋅⋅* Unordered sub-list.
+</span></span><span style=display:flex><span>1. Actual numbers don&#39;t matter, just that it&#39;s a number
+</span></span><span style=display:flex><span>⋅⋅⋅⋅1. Ordered sub-list
+</span></span><span style=display:flex><span>4. And another item.
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>⋅⋅⋅You can have properly indented paragraphs within list items. Notice the blank line above, and the leading spaces (at least one, but we&#39;ll use three here to also align the raw Markdown).
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>⋅⋅⋅To have a line break without a paragraph, you will need to use two trailing spaces.⋅⋅
+</span></span><span style=display:flex><span>⋅⋅⋅Note that this line is separate, but within the same paragraph.⋅⋅
+</span></span><span style=display:flex><span>⋅⋅⋅(This is contrary to the typical GFM line break behaviour, where trailing spaces are not required.)
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>* Unordered list can use asterisks
+</span></span><span style=display:flex><span>- Or minuses
+</span></span><span style=display:flex><span>+ Or pluses
+</span></span></code></pre></div><ol><li><p>First ordered list item</p></li><li><p>Another item</p><ul><li>Unordered sub-list.</li></ul></li><li><p>Actual numbers don&rsquo;t matter, just that it&rsquo;s a number</p><ol><li>Ordered sub-list</li></ol></li><li><p>And another item.</p><p>You can have properly indented paragraphs within list items. Notice the blank line above, and the leading spaces (at least one, but we&rsquo;ll use three here to also align the raw Markdown).</p><p>To have a line break without a paragraph, you will need to use two trailing spaces.
+Note that this line is separate, but within the same paragraph.
+(This is contrary to the typical GFM line break behaviour, where trailing spaces are not required.)</p></li></ol><ul><li>Unordered list can use asterisks</li></ul><ul><li>Or minuses</li></ul><ul><li>Or pluses</li></ul><h2 id=links>Links
+<a href=#links class=anchor>#</a></h2><p>There are two ways to create links.</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-no-highlight data-lang=no-highlight><span style=display:flex><span>[I&#39;m an inline-style link](https://www.google.com)
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>[I&#39;m an inline-style link with title](https://www.google.com &#34;Google&#39;s Homepage&#34;)
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>[I&#39;m a reference-style link][Arbitrary case-insensitive reference text]
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>[I&#39;m a relative reference to a repository file](../blob/master/LICENSE)
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>[You can use numbers for reference-style link definitions][1]
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>Or leave it empty and use the [link text itself].
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>URLs and URLs in angle brackets will automatically get turned into links.
+</span></span><span style=display:flex><span>http://www.example.com or &lt;http://www.example.com&gt; and sometimes
+</span></span><span style=display:flex><span>example.com (but not on Github, for example).
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>Some text to show that the reference links can follow later.
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>[arbitrary case-insensitive reference text]: https://www.mozilla.org
+</span></span><span style=display:flex><span>[1]: http://slashdot.org
+</span></span><span style=display:flex><span>[link text itself]: http://www.reddit.com
+</span></span></code></pre></div><p><a href=https://www.google.com>I&rsquo;m an inline-style link</a></p><p><a href=https://www.google.com title="Google's Homepage">I&rsquo;m an inline-style link with title</a></p><p><a href=https://www.mozilla.org>I&rsquo;m a reference-style link</a></p><p><a href=../blob/master/LICENSE>I&rsquo;m a relative reference to a repository file</a></p><p><a href=http://slashdot.org>You can use numbers for reference-style link definitions</a></p><p>Or leave it empty and use the <a href=http://www.reddit.com>link text itself</a>.</p><p>URLs and URLs in angle brackets will automatically get turned into links.
+<a href=http://www.example.com>http://www.example.com</a> or <a href=http://www.example.com>http://www.example.com</a> and sometimes
+example.com (but not on Github, for example).</p><p>Some text to show that the reference links can follow later.</p><h2 id=images>Images
+<a href=#images class=anchor>#</a></h2><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-no-highlight data-lang=no-highlight><span style=display:flex><span>Here&#39;s our logo (hover to see the title text):
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>Inline-style:
+</span></span><span style=display:flex><span>![alt text](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png &#34;Logo Title Text 1&#34;)
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>Reference-style:
+</span></span><span style=display:flex><span>![alt text][logo]
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>[logo]: https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png &#34;Logo Title Text 2&#34;
+</span></span></code></pre></div><p>Here&rsquo;s our logo (hover to see the title text):</p><p>Inline-style:<figure><img src=https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png alt="alt text"><figcaption>Logo Title Text 1</figcaption></figure></p><p>Reference-style:<figure><img src=https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png alt="alt text"><figcaption>Logo Title Text 2</figcaption></figure></p><h2 id=code-and-syntax-highlighting>Code and Syntax Highlighting
+<a href=#code-and-syntax-highlighting class=anchor>#</a></h2><p>Code blocks are part of the Markdown spec, but syntax highlighting isn&rsquo;t. However, many renderers &ndash; like Github&rsquo;s and <em>Markdown Here</em> &ndash; support syntax highlighting. Which languages are supported and how those language names should be written will vary from renderer to renderer. <em>Markdown Here</em> supports highlighting for dozens of languages (and not-really-languages, like diffs and HTTP headers); to see the complete list, and how to write the language names, see the <a href=https://highlightjs.org/demo>highlight.js demo page</a>.</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-no-highlight data-lang=no-highlight><span style=display:flex><span>Inline `code` has `back-ticks around` it.
+</span></span></code></pre></div><p>Inline <code>code</code> has <code>back-ticks around</code> it.</p><p>Blocks of code are either fenced by lines with three back-ticks ```, or are indented with four spaces. I recommend only using the fenced code blocks &ndash; they&rsquo;re easier and only they support syntax highlighting.</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-javascript data-lang=javascript><span style=display:flex><span><span style=color:#66d9ef>var</span> <span style=color:#a6e22e>s</span> <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;JavaScript syntax highlighting&#34;</span>;
+</span></span><span style=display:flex><span><span style=color:#a6e22e>alert</span>(<span style=color:#a6e22e>s</span>);
+</span></span></code></pre></div><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-python data-lang=python><span style=display:flex><span>s <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;Python syntax highlighting&#34;</span>
+</span></span><span style=display:flex><span>print s
+</span></span></code></pre></div><pre tabindex=0><code>No language indicated, so no syntax highlighting in Markdown Here (varies on Github).
+But let&#39;s throw in a &lt;b&gt;tag&lt;/b&gt;.
+</code></pre><h2 id=footnotes>Footnotes
+<a href=#footnotes class=anchor>#</a></h2><p>Footnotes aren&rsquo;t part of the core Markdown spec, but they <a href=https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax#footnotes>supported by GFM</a>.</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-no-highlight data-lang=no-highlight><span style=display:flex><span>Here is a simple footnote[^1].
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>A footnote can also have multiple lines[^2].
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>You can also use words, to fit your writing style more closely[^note].
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>[^1]: My reference.
+</span></span><span style=display:flex><span>[^2]: Every new line should be prefixed with 2 spaces.
+</span></span><span style=display:flex><span>  This allows you to have a footnote with multiple lines.
+</span></span><span style=display:flex><span>[^note]:
+</span></span><span style=display:flex><span>    Named footnotes will still render with numbers instead of the text but allow easier identification and linking.
+</span></span><span style=display:flex><span>    This footnote also has been made with a different syntax using 4 spaces for new lines.
+</span></span></code></pre></div><p>Renders to:</p><p><figure><img src=https://user-images.githubusercontent.com/425687/160298620-6046b90e-698c-43cb-8e00-5f5871a906ad.png alt="rendered footnotes"></figure></p><h2 id=tables>Tables
+<a href=#tables class=anchor>#</a></h2><p>Tables aren&rsquo;t part of the core Markdown spec, but they are part of GFM and <em>Markdown Here</em> supports them. They are an easy way of adding tables to your email &ndash; a task that would otherwise require copy-pasting from another application.</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-no-highlight data-lang=no-highlight><span style=display:flex><span>Colons can be used to align columns.
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>| Tables        | Are           | Cool  |
+</span></span><span style=display:flex><span>| ------------- |:-------------:| -----:|
+</span></span><span style=display:flex><span>| col 3 is      | right-aligned | $1600 |
+</span></span><span style=display:flex><span>| col 2 is      | centered      |   $12 |
+</span></span><span style=display:flex><span>| zebra stripes | are neat      |    $1 |
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>There must be at least 3 dashes separating each header cell.
+</span></span><span style=display:flex><span>The outer pipes (|) are optional, and you don&#39;t need to make the
+</span></span><span style=display:flex><span>raw Markdown line up prettily. You can also use inline Markdown.
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>Markdown | Less | Pretty
+</span></span><span style=display:flex><span>--- | --- | ---
+</span></span><span style=display:flex><span>*Still* | `renders` | **nicely**
+</span></span><span style=display:flex><span>1 | 2 | 3
+</span></span></code></pre></div><p>Colons can be used to align columns.</p><table><thead><tr><th>Tables</th><th style=text-align:center>Are</th><th style=text-align:right>Cool</th></tr></thead><tbody><tr><td>col 3 is</td><td style=text-align:center>right-aligned</td><td style=text-align:right>$1600</td></tr><tr><td>col 2 is</td><td style=text-align:center>centered</td><td style=text-align:right>$12</td></tr><tr><td>zebra stripes</td><td style=text-align:center>are neat</td><td style=text-align:right>$1</td></tr></tbody></table><p>There must be at least 3 dashes separating each header cell. The outer pipes (|) are optional, and you don&rsquo;t need to make the raw Markdown line up prettily. You can also use inline Markdown.</p><table><thead><tr><th>Markdown</th><th>Less</th><th>Pretty</th></tr></thead><tbody><tr><td><em>Still</em></td><td><code>renders</code></td><td><strong>nicely</strong></td></tr><tr><td>1</td><td>2</td><td>3</td></tr></tbody></table><h2 id=blockquotes>Blockquotes
+<a href=#blockquotes class=anchor>#</a></h2><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-no-highlight data-lang=no-highlight><span style=display:flex><span>&gt; Blockquotes are very handy in email to emulate reply text.
+</span></span><span style=display:flex><span>&gt; This line is part of the same quote.
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>Quote break.
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>&gt; This is a very long line that will still be quoted properly when it wraps. Oh boy let&#39;s keep writing to make sure this is long enough to actually wrap for everyone. Oh, you can *put* **Markdown** into a blockquote.
+</span></span></code></pre></div><blockquote><p>Blockquotes are very handy in email to emulate reply text.
+This line is part of the same quote.</p></blockquote><p>Quote break.</p><blockquote><p>This is a very long line that will still be quoted properly when it wraps. Oh boy let&rsquo;s keep writing to make sure this is long enough to actually wrap for everyone. Oh, you can <em>put</em> <strong>Markdown</strong> into a blockquote.</p></blockquote><h2 id=inline-html>Inline HTML
+<a href=#inline-html class=anchor>#</a></h2><p>You can also use raw HTML in your Markdown, and it&rsquo;ll mostly work pretty well.</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-no-highlight data-lang=no-highlight><span style=display:flex><span>&lt;dl&gt;
+</span></span><span style=display:flex><span>  &lt;dt&gt;Definition list&lt;/dt&gt;
+</span></span><span style=display:flex><span>  &lt;dd&gt;Is something people use sometimes.&lt;/dd&gt;
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>  &lt;dt&gt;Markdown in HTML&lt;/dt&gt;
+</span></span><span style=display:flex><span>  &lt;dd&gt;Does *not* work **very** well. Use HTML &lt;em&gt;tags&lt;/em&gt;.&lt;/dd&gt;
+</span></span><span style=display:flex><span>&lt;/dl&gt;
+</span></span></code></pre></div><h2 id=horizontal-rule>Horizontal Rule
+<a href=#horizontal-rule class=anchor>#</a></h2><pre tabindex=0><code>Three or more...
+
+---
+
+Hyphens
+
+***
+
+Asterisks
+
+___
+
+Underscores
+</code></pre><p>Three or more&mldr;</p><hr><p>Hyphens</p><hr><p>Asterisks</p><hr><p>Underscores</p><h2 id=line-breaks>Line Breaks
+<a href=#line-breaks class=anchor>#</a></h2><p>My basic recommendation for learning how line breaks work is to experiment and discover &ndash; hit &lt;Enter> once (i.e., insert one newline), then hit it twice (i.e., insert two newlines), see what happens. You&rsquo;ll soon learn to get what you want. &ldquo;Markdown Toggle&rdquo; is your friend.</p><p>Here are some things to try out:</p><pre tabindex=0><code>Here&#39;s a line for us to start with.
+
+This line is separated from the one above by two newlines, so it will be a *separate paragraph*.
+
+This line is also a separate paragraph, but...
+This line is only separated by a single newline, so it&#39;s a separate line in the *same paragraph*.
+</code></pre><p>Here&rsquo;s a line for us to start with.</p><p>This line is separated from the one above by two newlines, so it will be a <em>separate paragraph</em>.</p><p>This line is also begins a separate paragraph, but&mldr;
+This line is only separated by a single newline, so it&rsquo;s a separate line in the <em>same paragraph</em>.</p><p>(Technical note: <em>Markdown Here</em> uses GFM line breaks, so there&rsquo;s no need to use MD&rsquo;s two-space line breaks.)</p><h2 id=youtube-videos>YouTube Videos
+<a href=#youtube-videos class=anchor>#</a></h2><p>They can&rsquo;t be added directly but you can add an image with a link to the video like this:</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-no-highlight data-lang=no-highlight><span style=display:flex><span>&lt;a href=&#34;http://www.youtube.com/watch?feature=player_embedded&amp;v=YOUTUBE_VIDEO_ID_HERE
+</span></span><span style=display:flex><span>&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;http://img.youtube.com/vi/YOUTUBE_VIDEO_ID_HERE/0.jpg&#34;
+</span></span><span style=display:flex><span>alt=&#34;IMAGE ALT TEXT HERE&#34; width=&#34;240&#34; height=&#34;180&#34; border=&#34;10&#34; /&gt;&lt;/a&gt;
+</span></span></code></pre></div><p>Or, in pure Markdown, but losing the image sizing and border:</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-no-highlight data-lang=no-highlight><span style=display:flex><span>[![IMAGE ALT TEXT HERE](http://img.youtube.com/vi/YOUTUBE_VIDEO_ID_HERE/0.jpg)](http://www.youtube.com/watch?v=YOUTUBE_VIDEO_ID_HERE)
+</span></span></code></pre></div><p>Referencing a bug by #bugID in your git commit links it to the slip. For example #1.</p><hr><p>License: <a href=https://creativecommons.org/licenses/by/3.0/>CC-BY</a></p></article></main><footer><div class=footer-content><div><a href=https://www.gnu.org/licenses/agpl-3.0.en.html>This website is licensed as AGPLv3.</a>
+<img class=footer-image src=/brojs/images/agplv3-license.png></div><a href=https://github.com/nextredo/brojs>Find this website's code here.</a><div>Site last updated: Jun 3, 2026</div></div></footer></body></html>
