@@ -11,7 +11,7 @@ blockquote {
  --note-colour: #1f6feb;
  --tip-colour: #238636;
  --important-colour: #8957e5;
- --warning-colour: #9e6a03;
+ --warning-colour: #cba20c;
  --caution-colour: #da3633;
  background-color: var(--bg2);
 }

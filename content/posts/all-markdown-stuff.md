@@ -31,22 +31,24 @@ I think these were missed by the resources above. \
 It indicates other things may have been missed too.
 
 ## Alerts
-> Regular blockquote \
-> Just a normal blockquote
+> Regular blockquote
+>
+> Just a normal blockquote \
+> Read about Hugo alerts [here][hugo-alerts]
 
-> [!NOTE]
+> [!NOTE] Take note...
 > Notes here
 
-> [!TIP]
+> [!TIP] Take a hint...
 > Tips here
 
-> [!IMPORTANT]
+> [!IMPORTANT] Listen up!
 > Important stuff here
 
-> [!WARNING]
+> [!WARNING] Here be dragons...
 > Warnings here
 
-> [!CAUTION]
+> [!CAUTION] Oh yeah and before I forget...
 > Cautionary tales here
 
 
@@ -502,3 +504,4 @@ License: [CC-BY](https://creativecommons.org/licenses/by/3.0/)
 [github-md]: https://github.github.com/gfm/
 [commonmark-md]: https://spec.commonmark.org/current/
 [github-md-cheatsheet]:https://github.com/adam-p/markdown-here/wiki/markdown-cheatsheet
+[hugo-alerts]: https://gohugo.io/render-hooks/blockquotes/#alerts

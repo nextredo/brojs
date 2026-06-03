@@ -1,6 +1,14 @@
 {{ if eq .Type "alert" }}
+  {{- $icons := dict
+    "note" "ℹ️"
+    "tip" "💡"
+    "important" "❕"
+    "warning" "⚠️"
+    "caution" "🛑️"
+  -}}
   <blockquote class="alert alert-type-{{ .AlertType }}">
     <p class="alert-title">
+      {{- index $icons .AlertType -}}
       {{ if .AlertTitle }}
         {{ .AlertTitle }}
       {{ else }}
