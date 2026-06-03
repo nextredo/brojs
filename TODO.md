@@ -22,6 +22,8 @@
 - [ ] Footer bits should be separated by pipe characters
 - [ ] Archive like this site <https://github.com/zhaohuabing/hugo-theme-cleanwhite>
 - [ ] Fix GFM alerts not showing up correctly (in all markdown post)
+- [ ] Posted date + updated date
+- [ ] Colour alert emojis with this <https://barrd.dev/article/adding-colour-to-an-emoji-using-different-css-techniques/>
 
 ## CICD
 - [ ] Auto-screenshot
