@@ -13,6 +13,9 @@
 - <https://gitlab.com/jmfergeau/hugo.386>
   - Retro BIOS-looking theme, super nice
   - Overhauled version in the works
+- <https://github.com/adityatelange/hugo-PaperMod>
+  - Super clean, nice
+  - Good tag stuff, i18n, icons, dark/light
 
 ## CSS Frameworks
 - <https://github.com/troxler/awesome-css-frameworks>

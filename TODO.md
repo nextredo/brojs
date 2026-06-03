@@ -20,6 +20,14 @@
 - [ ] Use HTML `<details>` element for something
 - [ ] Sitemap
 - [ ] Move license info to box on about page
+- [ ] Compactify tables styling
+- [ ] Footer bits should be separated by pipe characters
+- [ ] Archive like this site <https://github.com/zhaohuabing/hugo-theme-cleanwhite>
 
 ## Content
-- [ ]
+- [ ] Table
+- [ ] Extra stuff to show off everything and how it's styled
+  - [ ] Check full markdown guide for all objects it can make
+  - [ ] Check noJS sample site
+  - [ ] <https://tailbliss.nusserstudios.com/about/>
+  - [ ] Full goldmark markdown spec
