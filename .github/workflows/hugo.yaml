@@ -23,6 +23,9 @@ permissions:
 jobs:
   deploy:
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        shell: bash -x {0} # Print commands before execution
     concurrency:
       group: ${{ github.workflow }}-${{ github.ref }}
     steps:
@@ -60,7 +63,7 @@ jobs:
           npm install -g puppeteer
 
           # Install chromium
-          npm puppeteer browsers install chrome --install-deps
+          # npm puppeteer browsers install chrome --install-deps
 
           # Run the screenshotter
           node .github/workflows/screenshotter.js
