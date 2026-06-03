@@ -4,6 +4,8 @@
 ## Other
 - [ ] `go.mod` file so it can be used as a Hugo module
 - [ ] Move all demo site stuff into the `exampleSite` subdir
+  - Probs requires moving `hugo.toml` to the `config` dir
+- [ ] Use tidbits from `hugo new theme my-theme` generated files
 
 ## Customisation / Theming
 - [ ] Custom fire cursor on the website
