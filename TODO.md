@@ -24,6 +24,12 @@
 - [ ] Footer bits should be separated by pipe characters
 - [ ] Archive like this site <https://github.com/zhaohuabing/hugo-theme-cleanwhite>
 
+## CICD
+- [ ] Auto-screenshot
+  - Add functionality to the hugo build github action, where
+    it takes a photo of the published example site, then
+    commits it to the gh-pages branch to use in the main README
+
 ## Content
 - [ ] Table
 - [ ] Extra stuff to show off everything and how it's styled

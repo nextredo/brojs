@@ -1,39 +1,36 @@
 # broJS Hugo theme
 
 > [!NOTE]
-> This repo is based off the "noJS" theme by Andy Sukowski-Bang \
-> Find that theme here: <https://gitlab.com/andy.sb/nojs>
+> A minimal, no-JavaScript theme for the [Hugo][hugo] static site generator. \
+> Check out the demo at <https://nextredo.github.io/brojs>
 
-A minimal, no-JavaScript theme for the [Hugo][1] static site generator. \
-Check out the demo at <https://nextredo.github.io/brojs>
+![broJS theme screenshot][brojs-sc]
 
-![noJS theme screenshot][3]
+## Credit
+This repo is based off the "noJS" theme by Andy Sukowski-Bang. \
+Find that theme here: <https://gitlab.com/andy.sb/nojs> \
+Find a demo of that theme here: <https://nojs.andy.sb>
 
-## Features
-
+## Feature Summary
 * no JavaScript
-* dark mode via [`prefers-color-scheme`][4]
+* dark mode via [`prefers-color-scheme`][prefers-color-scheme]
 * [syntax highlighting](#syntax-highlighting)
 * [LaTeX via `transform.ToMath`](#latex-via-transformtomath)
 
 ## Installation
-
-For more information read the official [quick start guide][5] of Hugo.
+For more information read the official [quick start guide][hugo-quickstart] of Hugo.
 
 In your `themes/` directory, run:
-
 ```sh
-git clone https://git.andy.sb/nojs.git
+git clone https://github.com/nextredo/brojs.git
 ```
 
 Set the theme in `hugo.toml` at the base of the Hugo site:
-
 ```toml
-theme = "nojs"
+theme = "brojs"
 ```
 
 Add menu entries:
-
 ```toml
 [menus]
   [[menus.main]]
@@ -52,29 +49,38 @@ Add menu entries:
     weight = 3
 ```
 
-## Image captions
+## Development
+```bash
+# Flags are optional, but useful
+hugo server --buildDrafts --cleanDestinationDir \
+    --disableFastRender --noHTTPCache --logLevel info
+```
 
+### Tag Issues
+Running with `--disableFastRender` is recommended, as it avoids
+random site glitches, such as the following:
+1. Begin the dev server with `hugo server`
+1. Change the value of a tag in a post's front matter
+1. The "Tags" menu item is now broken (after a partial rebuild)
+
+## Features
+### Image captions
 You can add captions to images (technically using `<figcaption>` HTML tags) by adding titles, like so:
-
 ```md
 ![Alt text here](/path/to/image.png "Put your caption here!")
 ```
 
-## Syntax highlighting
-
-Disable [`noClasses`][6] to use [this modified algol_nu theme][7].
-
+### Syntax highlighting
+Disable [`noClasses`][hugo-syntax-highlighting] to use [this modified algol_nu theme][syntax.css].
 ```toml
 [markup]
   [markup.highlight]
     noClasses = false
 ```
 
-## LaTeX via [transform.ToMath][8]
-
-Instead of client-side JavaScript rendering of mathematical markup using [MathJax][9] or [KaTeX][10],
-use [this passthrough render hook][11] which calls the [transform.ToMath][8] function.
-
+### LaTeX via [transform.ToMath][hugo-tomath]
+Instead of client-side JavaScript rendering of mathematical markup using [MathJax][mathjax] or [KaTeX][katex],
+use [this passthrough render hook][render-ps.html] which calls the [transform.ToMath][hugo-tomath] function.
 ```toml
 [markup]
   [markup.goldmark]
@@ -94,18 +100,23 @@ Calculate the cohomology \(H^n(C;G)\) using the _universal coefficient theorem_:
 \[H^n(C;G) \cong \operatorname{Ext}(H_{n-1}(C),G) \oplus \operatorname{Hom}(H_n(C),G)\]
 ```
 
-Note that the [external `katex.css`][10] is loaded in the [`head.html` partial][11].
+Note that the [external `katex.css`][katex] is loaded in the [`head.html` partial][render-ps.html].
 
-[1]: https://gohugo.io/
-[2]: https://nojs.andy.sb/
-[3]: https://git.andy.sb/nojs/raw/main/images/screenshot.png
-[4]: https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-color-scheme
-[5]: https://gohugo.io/getting-started/quick-start/
-[6]: https://gohugo.io/content-management/syntax-highlighting/#noclasses
-[7]: https://git.andy.sb/nojs/blob/main/assets/css/syntax.css
-[8]: https://gohugo.io/functions/transform/tomath/
-[9]: https://www.mathjax.org/
-[10]: https://katex.org/
-[11]: https://git.andy.sb/nojs/blob/main/layouts/_markup/render-passthrough.html
-[12]: https://cdn.jsdelivr.net/npm/katex/dist/katex.css
-[13]: https://git.andy.sb/nojs/blob/main/layouts/_partials/head.html
+<!----------->
+<!-- # Links -->
+<!-- ## Internal -->
+[hugo]: https://gohugo.io/
+[brojs]: https://nextredo.github.io/brojs/
+[brojs-sc]: https://github.com/nextredo/brojs/raw/gh-pages/images/screenshot.png
+[syntax.css]: ./assets/css/syntax.css
+[head.html]: ./layouts/_partials/head.html
+[rpt.html]: ./layouts/_markup/render-passthrough.html
+
+<!-- ## Other -->
+[hugo-quickstart]: https://gohugo.io/getting-started/quick-start/
+[hugo-syntax-hl]: https://gohugo.io/content-management/syntax-highlighting/#noclasses
+[hugo-tomath]: https://gohugo.io/functions/transform/tomath/
+[prefers-color-scheme]: https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-color-scheme
+[mathjax]: https://www.mathjax.org/
+[katex]: https://katex.org/
+[katex-cdn]: https://cdn.jsdelivr.net/npm/katex/dist/katex.css

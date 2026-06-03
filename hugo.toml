@@ -29,7 +29,7 @@ copyright = "This website is licensed as AGPLv3."
 
   [[menus.main]]
     name = "About"
-    pageRef = "/about/"
+    pageRef = "/about"
     weight = 4
 
 
