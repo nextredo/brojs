@@ -31,3 +31,6 @@
   - [ ] Check noJS sample site
   - [ ] <https://tailbliss.nusserstudios.com/about/>
   - [ ] Full goldmark markdown spec
+    - Which conforms to:
+      - CommonMark
+      - GitHub Flavoured Markdown

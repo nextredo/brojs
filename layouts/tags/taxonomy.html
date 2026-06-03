@@ -8,7 +8,7 @@
       {{- with site.GetPage (path.Join $type $name) }}
         <li>
           <a href="{{ .RelPermalink }}">
-            {{ $name }}
+            {{ .LinkTitle }}
             <sup>{{ $count }}</sup>
           </a>
         </li>
