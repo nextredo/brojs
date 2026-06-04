@@ -58,6 +58,7 @@ jobs:
           sudo apt-get install -y nodejs npm git
 
           # Setup work dir, install Puppeteer
+          # Puppeteer automatically installs a chromium version to use
           cd /tmp
           mkdir shotter && cd shotter
           npm init -y
@@ -79,19 +80,26 @@ jobs:
           # print img to console
           sudo apt-get install -y chafa
           chafa ${{ github.workspace }}/images/screenshot.png
+          chafa -f symbols --symbols ascii ${{ github.workspace }}/images/screenshot.png
 
+          sudo apt-get install -y catimg
+          catimg -c ${{ github.workspace }}/images/screenshot.png
 
-      # Install chromium
-      # npm puppeteer browsers install chrome --install-deps
+          sudo apt-get install -y timg
+          timg ${{ github.workspace }}/images/screenshot.png
 
-      # TODO probably need to commit it here
-      # - name: Git Commit and Push
-      #   run: |
-      #     git config --global user.name "${{ github.triggering_actor }}"
-      #     git config --global user.email "${{ github.triggering_actor }}@users.noreply.github.com"
-      #     git add ./images/screenshot.png
-      #
-      #     # Only commit if there are actual changes to prevent workflow errors
-      #     git diff-index --quiet HEAD || git commit -m "Automated update"
-      #     git push
+      - name: Commit homepage screenshot
+        run: |
+          # CD into repo
+          cd ${{ github.workspace }}
+
+          # Setup git
+          git config --local user.name "${{ github.triggering_actor }}"
+          git config --local user.email "${{ github.triggering_actor }}@users.noreply.github.com"
+          git add ./images/screenshot.png
+
+          # Commit if possible
+          # Only commit if there are actual changes to prevent workflow errors
+          git diff-index --quiet HEAD || git commit -m "Screenshot update"
+          git push
 
