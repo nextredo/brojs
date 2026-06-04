@@ -62,7 +62,7 @@ jobs:
 
           # Run the screenshotter, now that the website has been published
           cd /tmp/shotter
-          node ./screenshotter.js ${{ github.workspace }} ${{ github.event.deployment_status.environment_url }}
+          node ./screenshotter.js ${{ github.workspace }} "https://nextredo.github.io/brojs/"
           sleep 2
 
       - name: Commit homepage screenshot
