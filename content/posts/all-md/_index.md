@@ -30,12 +30,23 @@ In any case, this post has a bunch of markdown constructs in it, so you can see 
 I think these were missed by the resources above.
 It indicates other things may have been missed too.
 
+## Hugo's Built-in Figure Shortcode
+{{< figure
+  src="./nasa-aB5tmNaOsYA-unsplash.jpg"
+  alt="Beautiful earthrise"
+  link="https://unsplash.com/photos/earth-rises-over-the-dark-lunar-surface-aB5tmNaOsYA"
+  caption=`A stunning earthrise over the moon.
+  Photo by [NASA](https://unsplash.com/@nasa?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
+  on [Unsplash](https://unsplash.com/photos/earth-rises-over-the-dark-lunar-surface-aB5tmNaOsYA?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText).`
+  class="very-classy"
+>}}
+
 ## Big Image
-![A blurry image of a multicolored background](./adam-bignell-Zq9Diu8LBQ4-unsplash.jpg)
+![A blurry image of a multicolored background](./adam-bignell-Zq9Diu8LBQ4-unsplash.jpg "Adam's picture")
 Photo by [Adam Bignell][adam-bignell-us] on [Unsplash][adam-bignell-pic]
 
 ## Big Image 2
-![Snow capped mountain peak at sunrise with rocky foreground](./kevin-mueller-PvpeQjWk33Y-unsplash.jpg)
+![Snow capped mountain peak at sunrise with rocky foreground](./kevin-mueller-PvpeQjWk33Y-unsplash.jpg "Kevin's picture")
 Photo by [Kevin Mueller][kevin-mueller-us] on [Unsplash][kevin-mueller-pic]
 
 
