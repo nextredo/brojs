@@ -1,10 +1,13 @@
 <div class="footer-content">
   <span>
+    {{ $license_link := "LICENSE" | relURL }}
     {{ with .Site.Copyright }}
-      <a href="{{ "LICENSE" | relURL }}">{{ . }}</a>
+      <a href="{{ $license_link }}">{{ . }}</a>
     {{ end }}
     {{ with $.Site.Params.license.image }}
-      <img class="footer-image" src="{{ . | relURL }}"/>
+      <a href="{{ $license_link }}">
+        <img class="footer-image" src="{{ . | relURL }}"/>
+      </a>
     {{ end }}
   </span>
   {{ if eq .Site.Params.footer.made_with_statement true }}
