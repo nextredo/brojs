@@ -75,8 +75,8 @@ jobs:
 
           # TODO remove
           # print img to console
-          sudo apt install chafa
-          chafa ${{ github.workspace }}/images/screenshot.png
+          sudo apt-get install -y catimg
+          catimg ${{ github.workspace }}/images/screenshot.png
 
       # TODO probably need to commit it here
       # - name: Git Commit and Push
