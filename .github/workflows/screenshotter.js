@@ -27,8 +27,12 @@ console.log("Got args");
   const page = await browser.newPage({ waitUntil: "networkidle2" });
   console.log("Setup Puppeteer");
 
-  // Screenshot
+  // Page setup
+  await page.setViewport({ width: 1280, height: 720 });
   await page.goto(website);
+  console.log("Setup page");
+
+  // Screenshot
   await page.screenshot({ path: `${repoPath}/images/screenshot.png` });
   console.log("Took screenshot");
 
