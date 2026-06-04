@@ -3,13 +3,22 @@ baseURL = "https://nextredo.github.io/brojs/"
 title = "broJS Hugo Theme"
 
 # Copyright notice to show at the bottom of the page
-# copyright = "© {{ now.Year }}. All rights reserved."
 # copyright = "© 2026. All rights reserved."
-copyright = "This website is licensed as AGPLv3."
+copyright = "© MIT License"
 
 [module]
   [module.hugoVersion]
     min = "0.146.0"
+
+  # Explicitly keep existing static dir mount
+  [[module.mounts]]
+    source = "static"
+    target = "static"
+
+  # Mount LICENSE file
+  [[module.mounts]]
+    source = "LICENSE"
+    target = "static/LICENSE"
 
 [menus]
   [[menus.main]]
@@ -32,7 +41,6 @@ copyright = "This website is licensed as AGPLv3."
     pageRef = "/about"
     weight = 4
 
-
 # Custom parameters
 [params]
   repo_url = "https://github.com/nextredo/brojs"
@@ -40,5 +48,4 @@ copyright = "This website is licensed as AGPLv3."
   # Supplementary copyright license information
   [params.license]
     # Important to *NOT* have a leading "/" in the image path
-    image = "images/agplv3-license.png"
-    link = "https://www.gnu.org/licenses/agpl-3.0.en.html"
+    image = "https://img.shields.io/badge/license-MIT-green"

@@ -1,16 +1,16 @@
 <div class="footer-content">
+  <!-- TODO remove this with, make it with .Site.Copyright -->
   {{ with .Site.Params.license }}
     <div>
-      {{ $lic_text := $.Site.Copyright }}
-      {{ if $lic_text }}
-        {{ with .link }}
-          <a href="{{ . }}">{{ $lic_text }}</a>
-        {{ else }}
-          {{ $lic_text }}
-        {{ end }}
+      {{ with $.Site.Copyright }}
+        {{ debug.Dump . }}
+        {{ printf "%T type" . }}
+        <a href="{{ "LICENSE" | relURL }}">{{ . }}</a>
       {{ end }}
       {{ with .image }}
-        <img class="footer-image" src="{{ . | relLangURL }}"/>
+      {{ debug.Dump . }}
+      {{ printf "%T type" . }}
+        <img class="footer-image" src="{{ . | relURL }}"/>
       {{ end }}
     </div>
   {{ end }}

@@ -102,7 +102,11 @@ Calculate the cohomology \(H^n(C;G)\) using the _universal coefficient theorem_:
 
 Note that the [external `katex.css`][katex] is loaded in the [`head.html` partial][render-ps.html].
 
-<!----------->
+## License
+This theme is released under [the MIT License][mit-license].
+[View the license file here][./LICENSE].
+
+<!----------------------------------------------------------------------------->
 <!-- # Links -->
 <!-- ## Internal -->
 [hugo]: https://gohugo.io/
@@ -120,3 +124,4 @@ Note that the [external `katex.css`][katex] is loaded in the [`head.html` partia
 [mathjax]: https://www.mathjax.org/
 [katex]: https://katex.org/
 [katex-cdn]: https://cdn.jsdelivr.net/npm/katex/dist/katex.css
+[mit-license]: https://opensource.org/license/mit
