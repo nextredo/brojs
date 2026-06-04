@@ -4,8 +4,10 @@
 > A minimal, no-JavaScript theme for the [Hugo][hugo] static site generator. \
 > Check out the demo at <https://nextredo.github.io/brojs>
 
-![broJS theme screenshot][brojs-sc-raw]
-This may be blank on bad CI/CD runs. Check [here][brojs-sc] if it is.
+![broJS theme screenshot - light mode][brojs-sc-raw-light] \
+![broJS theme screenshot - dark mode][brojs-sc-raw-dark]
+This may be blank on bad CI/CD runs. See the latest actions [here][brojs-actions].
+Check [here][brojs-sc] if it is.
 
 ## Credit
 This repo is based off the "noJS" theme by Andy Sukowski-Bang. \
@@ -112,8 +114,11 @@ This theme is released under [the MIT License][mit-license].
 <!-- ## Internal -->
 [hugo]: https://gohugo.io/
 [brojs]: https://nextredo.github.io/brojs/
-[brojs-sc]: https://github.com/nextredo/brojs/blob/gh-pages/images/screenshot.png
-[brojs-sc-raw]: https://github.com/nextredo/brojs/raw/gh-pages/images/screenshot.png
+[brojs-sc-light]: https://github.com/nextredo/brojs/blob/gh-pages/images/cicd/sc-light.png
+[brojs-sc-dark]: https://github.com/nextredo/brojs/blob/gh-pages/images/cicd/sc-dark.png
+[brojs-sc-raw-light]: https://github.com/nextredo/brojs/raw/gh-pages/images/cicd/sc-light.png
+[brojs-sc-raw-dark]: https://github.com/nextredo/brojs/raw/gh-pages/images/cicd/sc-dark.png
+[brojs-actions]: https://github.com/nextredo/brojs/actions
 [syntax.css]: ./assets/css/syntax.css
 [head.html]: ./layouts/_partials/head.html
 [rpt.html]: ./layouts/_markup/render-passthrough.html

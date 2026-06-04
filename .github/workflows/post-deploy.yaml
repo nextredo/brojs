@@ -24,7 +24,6 @@ jobs:
           fetch-depth: 0
 
       - name: To proceed or not to proceed?
-        # TODO this instead vv
         if: ${{ github.event.workflow_run.conclusion }} == 'success'
         run: |
           echo "Pages deployment finished with: ${{ github.event.workflow_run.conclusion }}"
@@ -61,6 +60,9 @@ jobs:
           # Get the runner from the primary branch
           cp ${{ github.workspace }}/.github/workflows/screenshotter.js /tmp/shotter/
 
+          # Make the output folder in the repo
+          mkdir -p "./images/cicd/"
+
           # Checkout the pages branch, so changed files are on this branch
           git checkout gh-pages
 
@@ -68,7 +70,8 @@ jobs:
           cd /tmp/shotter
 
           # Run the screenshotter, now that the website has been published
-          node ./screenshotter.js ${{ github.workspace }} "https://nextredo.github.io/brojs/"
+          node ./screenshotter.js "${{ github.workspace }}/images/cicd/" \
+            "https://nextredo.github.io/brojs/"
           sleep 2
 
       - name: Commit homepage screenshot
@@ -79,7 +82,7 @@ jobs:
           git checkout gh-pages
           git config --local user.name "${{ github.actor }}"
           git config --local user.email "${{ github.actor }}@users.noreply.github.com"
-          git add ./images/screenshot.png
+          git add ./images/cicd/
 
           # Commit if changes exist
           git diff-index --quiet HEAD || git commit -m "ci: post deploy update"

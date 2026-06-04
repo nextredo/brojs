@@ -1,18 +1,17 @@
 // Small utility to take a screenshot of the website
 // NOTE:
-// The first custom argument is the path to the GitHub repo's root.
-// The second custom argument is the website to screenshot.
+// - First user arg is the screenshot output directory path.
+// - Second user arg is the website to screenshot.
 
 // Imports
 const puppeteer = require("puppeteer");
-const resolve = require("path").resolve;
+const path = require("path");
 console.log("Imported");
 
 // Args
-const args     = process.argv.slice(2);
-const repoPath = resolve(args[0]); // Must be an absolute path so puppeteer accepts it
-const website  = args[1];
-
+const args    = process.argv.slice(2);
+const outPath = path.resolve(args[0]); // Convert to absolute path
+const website = args[1];
 console.log("Got args");
 
 // Main
@@ -28,13 +27,28 @@ console.log("Got args");
   console.log("Setup Puppeteer");
 
   // Page setup
-  await page.setViewport({ width: 1280, height: 720 });
+  await page.setViewport({ width: 1920, height: 1080 });
+  await page.emulateMediaFeatures([{ name: "prefers-color-scheme", value: "light" }]);
   await page.goto(website);
   console.log("Setup page");
 
+  // Output filepaths
+  // Must be absolute paths so puppeteer accepts them
+  const lightOutPath = path.join(outPath, "/sc-light.png")
+  const darkOutPath  = path.join(outPath, "/sc-dark.png")
+
+  // Light mode
   // Screenshot
-  await page.screenshot({ path: `${repoPath}/images/screenshot.png` });
-  console.log("Took screenshot");
+  console.log(`Taking light screenshot: ${lightOutPath}`);
+  await page.screenshot({ path: lightOutPath });
+
+  // Swap to dark mode
+  await page.emulateMediaFeatures([{ name: "prefers-color-scheme", value: "dark" }]);
+
+  // Dark mode
+  // Screenshot
+  console.log(`Taking dark screenshot: ${darkOutPath}`);
+  await page.screenshot({ path: darkOutPath });
 
   await browser.close();
   console.log("Ending");
