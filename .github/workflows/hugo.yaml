@@ -55,28 +55,33 @@ jobs:
         run: |
           # Install dependencies
           sudo apt-get update
-          sudo apt-get install -y nodejs npm
+          sudo apt-get install -y nodejs npm git
 
-          # Install Puppeteer
-          pwd
-          ls
-
+          # Install & Install Puppeteer
           cd /tmp
           mkdir shotter && cd shotter
           npm init -y
           npm install puppeteer
 
-          # Install chromium
-          # npm puppeteer browsers install chrome --install-deps
+          # Get the runner from the primary branch
+          cp ${{ github.workspace }}/.github/workflows/screenshotter.js .
+
+          # Check out the gh-pages branch
+          # (necessary, as that's where the just-build index.html lives)
+          cd ${{ github.workspace }}
+          git checkout gh-pages
 
           # Run the screenshotter
-          cp ${{ github.workspace }}/.github/workflows/screenshotter.js .
           node ./screenshotter.js ${{ github.workspace }}/index.html
 
           # TODO remove
           # print img to console
           sudo apt-get install -y chafa
           chafa ${{ github.workspace }}/images/screenshot.png
+
+
+      # Install chromium
+      # npm puppeteer browsers install chrome --install-deps
 
       # TODO probably need to commit it here
       # - name: Git Commit and Push

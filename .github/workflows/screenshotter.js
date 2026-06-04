@@ -9,7 +9,7 @@ const resolve = require("path").resolve;
 
 (async () => {
   const browser = await puppeteer.launch({ headless: true, args: ["--no-sandbox"]});
-  const page = await browser.newPage({ waitUntil: 'networkidle2' });
+  const page = await browser.newPage({ waitUntil: "networkidle2" });
 
   const absoluteFilePath = resolve(filePath);
   console.log(`Absolute path: ${absoluteFilePath}`);
@@ -18,4 +18,10 @@ const resolve = require("path").resolve;
 
   console.log("Captured screenshot");
   await browser.close();
-})();
+})().then((result) => {
+  console.log("Success:", result);
+  process.exit(0);
+}).catch((error) => {
+  console.error("Error:", error);
+  process.exit(1);
+});
