@@ -56,15 +56,16 @@ jobs:
 
       - name: Generate homepage screenshot
         run: |
-          # Checkout the pages branch, so changed files are on this branch
           cd ${{ github.workspace }}
-          git checkout gh-pages
-
-          # Swap back to temporary project directory
-          cd /tmp/shotter
 
           # Get the runner from the primary branch
           cp ${{ github.workspace }}/.github/workflows/screenshotter.js /tmp/shotter/
+
+          # Checkout the pages branch, so changed files are on this branch
+          git checkout gh-pages
+
+          # Move back to the temporary project directory
+          cd /tmp/shotter
 
           # Run the screenshotter, now that the website has been published
           node ./screenshotter.js ${{ github.workspace }} "https://nextredo.github.io/brojs/"

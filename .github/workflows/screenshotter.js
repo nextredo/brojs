@@ -16,7 +16,7 @@ const website  = args[1];
 console.log("Got args");
 
 // Main
-(async () => {
+const main = async () => {
   console.log("Starting");
 
   // Puppeteer setup
@@ -38,10 +38,20 @@ console.log("Got args");
 
   await browser.close();
   console.log("Ending");
-})().then((result) => {
-  console.log("Screenshot succeeded:", result);
-  process.exit(0);
-}).catch((error) => {
-  console.error("Screenshot failed:", error);
+};
+
+// Run main
+try {
+  await main().then((result) => {
+    console.log("Succeeded:", result);
+    process.exit(0);
+  }).catch((error) => {
+    console.error("Failed:", error);
+    process.exit(1);
+  });
+} catch (error) {
+  console.error("Error thrown:", error);
   process.exit(1);
-});
+}
+
+
