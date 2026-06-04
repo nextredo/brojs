@@ -40,17 +40,17 @@ main {
   padding-bottom: 2em;
 }
 
+.footer-content * img {
+  height: 1em;
+  width: auto;
+  vertical-align: text-top;
+}
+
 .footer-content {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-}
-
-.footer-image {
-  height: 1em;
-  width: auto;
-  vertical-align: center;
 }
 
 article {
@@ -66,7 +66,8 @@ article:not(:last-of-type) {
   margin: 1em 0;
 }
 
-.tags, .info {
+.tags,
+.info {
   list-style: none;
   display: inline-flex;
   flex-wrap: wrap;
@@ -89,7 +90,12 @@ article:not(:last-of-type) {
   visibility: visible;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   overflow-wrap: break-word;
 }
 
