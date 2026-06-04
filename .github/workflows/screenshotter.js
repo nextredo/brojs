@@ -14,6 +14,10 @@ const outPath = path.resolve(args[0]); // Convert to absolute path
 const website = args[1];
 console.log("Got args");
 
+// TODO make this actually error out properly
+// It doesn't seem to return a nonzero exit code when
+// something fails within puppeteer
+
 // Main
 (async () => {
   console.log("Starting");

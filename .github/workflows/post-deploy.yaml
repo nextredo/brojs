@@ -24,7 +24,7 @@ jobs:
           fetch-depth: 0
 
       - name: To proceed or not to proceed?
-        if: ${{ github.event.workflow_run.conclusion }} == 'success'
+        if: github.event.workflow_run.conclusion == 'success'
         run: |
           echo "Pages deployment finished with: ${{ github.event.workflow_run.conclusion }}"
           sleep 5
