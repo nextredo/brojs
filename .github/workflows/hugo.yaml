@@ -85,9 +85,6 @@ jobs:
           sudo apt-get install -y catimg
           catimg -c ${{ github.workspace }}/images/screenshot.png
 
-          sudo apt-get install -y timg
-          timg ${{ github.workspace }}/images/screenshot.png
-
       - name: Commit homepage screenshot
         run: |
           # CD into repo
