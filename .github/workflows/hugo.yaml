@@ -32,7 +32,7 @@ jobs:
       - uses: actions/checkout@v4
         with:
           submodules: true  # Fetch Hugo themes (true OR recursive)
-          fetch-depth: 0    # Fetch all history for .GitInfo and .Lastmod
+          fetch-depth: 0    # Fetch history for Hugo .GitInfo usage
 
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v3
@@ -50,53 +50,3 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./public
           publish_branch: gh-pages
-
-      - name: Generate homepage screenshot
-        run: |
-          # Install dependencies
-          sudo apt-get update
-          sudo apt-get install -y nodejs npm git
-
-          # Setup work dir, install Puppeteer
-          # Puppeteer automatically installs a chromium version to use
-          cd /tmp
-          mkdir shotter && cd shotter
-          npm init -y
-          npm install puppeteer
-
-          # Get the runner from the primary branch
-          cp ${{ github.workspace }}/.github/workflows/screenshotter.js .
-
-          # Check out the gh-pages branch
-          # (necessary, as that's where the just-build index.html lives)
-          cd ${{ github.workspace }}
-          git checkout gh-pages
-          cd /tmp/shotter
-
-          # Run the screenshotter
-          node ./screenshotter.js ${{ github.workspace }}
-
-          # TODO remove
-          # print img to console
-          sudo apt-get install -y chafa
-          chafa ${{ github.workspace }}/images/screenshot.png
-          chafa -f symbols --symbols ascii ${{ github.workspace }}/images/screenshot.png
-
-          sudo apt-get install -y catimg
-          catimg -c ${{ github.workspace }}/images/screenshot.png
-
-      - name: Commit homepage screenshot
-        run: |
-          # CD into repo
-          cd ${{ github.workspace }}
-
-          # Setup git
-          git config --local user.name "${{ github.triggering_actor }}"
-          git config --local user.email "${{ github.triggering_actor }}@users.noreply.github.com"
-          git add ./images/screenshot.png
-
-          # Commit if possible
-          # Only commit if there are actual changes to prevent workflow errors
-          git diff-index --quiet HEAD || git commit -m "Screenshot update"
-          git push
-

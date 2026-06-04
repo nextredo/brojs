@@ -3,9 +3,11 @@ const puppeteer = require("puppeteer");
 const resolve = require("path").resolve;
 
 // NOTE:
-// The first custom argument should be the path to the GitHub repo's root.
+// The first custom argument is the path to the GitHub repo's root.
+// The second custom argument is the website to screenshot.
 const args = process.argv.slice(2);
 const repoPath = args[0];
+const website = args[0];
 const absoluteRepoPath = resolve(repoPath);
 
 // Main
@@ -15,8 +17,7 @@ const absoluteRepoPath = resolve(repoPath);
   const page = await browser.newPage({ waitUntil: "networkidle2" });
 
   // Screenshot
-  console.log(`Absolute repo path: ${absoluteRepoPath}`);
-  await page.goto(`file://${absoluteRepoPath}/index.html`);
+  await page.goto(website);
   await page.screenshot({ path: `${absoluteRepoPath}/images/screenshot.png` });
 
   await browser.close();

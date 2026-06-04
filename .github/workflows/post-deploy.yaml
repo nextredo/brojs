@@ -1,0 +1,61 @@
+name: Post Deployment Tasks
+
+on:
+  deployment_status:
+
+jobs:
+  after-deploy:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        shell: bash -x {0} # Print commands before execution
+
+    # Only run if the deployment was successful and matches the GitHub Pages environment
+    if: github.event.deployment_status.state == 'success' && github.event.deployment.environment == 'github-pages'
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          submodules: true
+          fetch-depth: 0
+
+      - name: Use Deployed Live URL
+        run: |
+          echo "The website is live at: ${{ github.event.deployment_status.environment_url }}"
+          # Insert tasks here (e.g., curl, Lighthouse audits, Cypress tests)
+
+      - name: Install dependencies
+        run: |
+          # Install dependencies
+          sudo apt-get update
+          sudo apt-get install -y nodejs npm git
+
+      - name: Install Puppeteer
+        run: |
+          # Setup work dir, install Puppeteer
+          # Puppeteer automatically installs a chromium version to use
+          cd /tmp
+          mkdir shotter && cd shotter
+          npm init -y
+          npm install puppeteer
+
+      - name: Generate homepage screenshot
+        run: |
+          # Get the runner from the primary branch
+          cp ${{ github.workspace }}/.github/workflows/screenshotter.js .
+
+          # Run the screenshotter, now that the website has been published
+          node ./screenshotter.js ${{ github.workspace }} ${{ github.event.deployment_status.environment_url }}
+
+      - name: Commit homepage screenshot
+        run: |
+          # CD into repo
+          cd ${{ github.workspace }}
+
+          # Setup git
+          git config --local user.name "${{ github.triggering_actor }}"
+          git config --local user.email "${{ github.triggering_actor }}@users.noreply.github.com"
+          git add ./images/screenshot.png
+
+          # Commit if changes exist
+          git diff-index --quiet HEAD || git commit -m "Screenshot update"
+          git push
