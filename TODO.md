@@ -18,7 +18,6 @@
 - [ ] Document theme toml options
 - [ ] Sitemap
 - [ ] Move license info to box on about page
-- [ ] Compactify tables styling
 - [ ] Footer bits should be separated by pipe characters
 - [ ] Archive like this site <https://github.com/zhaohuabing/hugo-theme-cleanwhite>
 - [ ] Posted date + updated date

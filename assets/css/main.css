@@ -126,7 +126,10 @@ th {
 }
 
 td,
-th,
+th {
+  padding: 0.25em;
+}
+
 pre {
   padding: 1em;
 }
