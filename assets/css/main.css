@@ -68,7 +68,9 @@ article:not(:last-of-type) {
 .tags, .info {
   list-style: none;
   display: inline-flex;
+  flex-wrap: wrap;
   gap: 0.5em;
+  row-gap: inherit;
   margin: 0;
   padding: 0;
 }

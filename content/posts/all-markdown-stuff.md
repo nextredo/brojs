@@ -27,7 +27,7 @@ In case this has changed since writing the above, you can [read about it here][h
 In any case, this post has a bunch of markdown constructs in it, so you can see how this theme looks.
 
 # Extra Bits
-I think these were missed by the resources above. \
+I think these were missed by the resources above.
 It indicates other things may have been missed too.
 
 ## Alerts
@@ -54,8 +54,10 @@ It indicates other things may have been missed too.
 
 # GitHub Flavoured Markdown
 > [!NOTE]
-> Sample/example/cheatsheet taken from [here][github-md-cheatsheet]. \
+> Sample/example/cheatsheet taken from [here][github-md-cheatsheet].
+>
 > I'm pretty sure this doesn't have everything.
+> Also pretty sure some links are broken.
 
 This is intended as a quick reference and showcase. For more complete info, see [John Gruber's original spec](http://daringfireball.net/projects/markdown/) and the [Github-flavored Markdown info page](http://github.github.com/github-flavored-markdown/).
 
