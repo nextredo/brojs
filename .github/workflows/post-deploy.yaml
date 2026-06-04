@@ -25,7 +25,7 @@ jobs:
           # Unnecessary sleep to allow site to fully update
           sleep 15
 
-      - name: Stats on Deployment
+      - name: To proceed or not to proceed?
         run: |
           echo "Pages deployment finished with: ${{ github.event.workflow_run.conclusion }}"
 
@@ -40,21 +40,22 @@ jobs:
         run: |
           # Install dependencies
           sudo apt-get update
-          sudo apt-get install -y nodejs npm git
+          sudo apt-get install -y nodejs npm
 
       - name: Install Puppeteer
         run: |
           # Setup work dir, install Puppeteer
           # Puppeteer automatically installs a chromium version to use
-          cd /tmp
-          mkdir shotter && cd shotter
+          mkdir /tmp/shotter
+          cd /tmp/shotter
           npm init -y
           npm install puppeteer
+          sleep 5
 
       - name: Generate homepage screenshot
         run: |
           # Get the runner from the primary branch
-          cp ${{ github.workspace }}/.github/workflows/screenshotter.js .
+          cp ${{ github.workspace }}/.github/workflows/screenshotter.js /tmp/shotter/
 
           # Run the screenshotter, now that the website has been published
           node ./screenshotter.js ${{ github.workspace }} ${{ github.event.deployment_status.environment_url }}

@@ -6,9 +6,10 @@ const resolve = require("path").resolve;
 // The first custom argument is the path to the GitHub repo's root.
 // The second custom argument is the website to screenshot.
 const args = process.argv.slice(2);
-const repoPath = args[0];
-const website = args[0];
-const absoluteRepoPath = resolve(repoPath);
+
+// Make it an absolute path, so puppeteer accepts it
+const repoPath = resolve(args[0]);
+const website = args[1];
 
 // Main
 (async () => {
@@ -18,7 +19,7 @@ const absoluteRepoPath = resolve(repoPath);
 
   // Screenshot
   await page.goto(website);
-  await page.screenshot({ path: `${absoluteRepoPath}/images/screenshot.png` });
+  await page.screenshot({ path: `${repoPath}/images/screenshot.png` });
 
   await browser.close();
 })().then((result) => {
