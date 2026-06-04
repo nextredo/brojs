@@ -6,6 +6,9 @@ on:
     workflows: ["pages-build-deployment"]
     types: [completed]
 
+permissions:
+  contents: write
+
 jobs:
   after-deploy:
     runs-on: ubuntu-latest
