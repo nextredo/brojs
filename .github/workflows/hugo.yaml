@@ -73,7 +73,7 @@ jobs:
           cd /tmp/shotter
 
           # Run the screenshotter
-          node ./screenshotter.js ${{ github.workspace }}/index.html
+          node ./screenshotter.js ${{ github.workspace }}
 
           # TODO remove
           # print img to console
