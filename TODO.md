@@ -22,6 +22,7 @@
 - [ ] Archive like this site <https://github.com/zhaohuabing/hugo-theme-cleanwhite>
 - [ ] Posted date + updated date
 - [ ] Colour alert emojis with this <https://barrd.dev/article/adding-colour-to-an-emoji-using-different-css-techniques/>
+- [ ] Put screenshot.png on the front page of my site so it recurses with CI/CD lol
 
 ## CICD
 - [ ] Auto-screenshot

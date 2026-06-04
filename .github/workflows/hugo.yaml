@@ -60,7 +60,9 @@ jobs:
           # Install Puppeteer
           pwd
           ls
-          mkdir my-puppeteer-app && cd my-puppeteer-app
+
+          cd /tmp
+          mkdir shotter && cd shotter
           npm init -y
           npm install puppeteer
 
@@ -68,4 +70,22 @@ jobs:
           # npm puppeteer browsers install chrome --install-deps
 
           # Run the screenshotter
-          node ${{ github.workspace }}/github/workflows/screenshotter.js
+          cp ${{ github.workspace }}/.github/workflows/screenshotter.js .
+          node ./screenshotter.js
+
+          # TODO remove
+          # print img to console
+          sudo apt install chafa
+          chafa ${{ github.workspace }}/images/screenshot.png
+
+      # TODO probably need to commit it here
+      # - name: Git Commit and Push
+      #   run: |
+      #     git config --global user.name "${{ github.triggering_actor }}"
+      #     git config --global user.email "${{ github.triggering_actor }}@users.noreply.github.com"
+      #     git add ./images/screenshot.png
+      #
+      #     # Only commit if there are actual changes to prevent workflow errors
+      #     git diff-index --quiet HEAD || git commit -m "Automated update"
+      #     git push
+
