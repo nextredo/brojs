@@ -13,9 +13,8 @@ jobs:
       run:
         shell: bash -x {0} # Print commands before execution
 
-    # Only run if the deployment was successful and matches the GitHub Pages environment
-    # if: github.event.deployment_status.state == 'success' && github.event.deployment.environment == 'github-pages'
     steps:
+      - name: Checkout code
       - uses: actions/checkout@v4
         with:
           submodules: true
@@ -24,14 +23,18 @@ jobs:
       - name: Wait
         run: |
           # Sleep to allow the site to get published
-          sleep 90
+          sleep 15
 
       - name: Stats on Deployment
         run: |
-          echo "The website is live at: ${{ github.event.deployment_status.environment_url }}"
-          echo "${{ github.event.deployment_status.state }}
-          echo "${{ github.event.deployment.environment }}"
-          # Insert tasks here (e.g., curl, Lighthouse audits, Cypress tests)
+          echo "Pages deployment finished with: ${{ github.event.workflow_run.conclusion }}"
+
+          # Quit if deployment failed
+          if [ ${{ github.event.workflow_run.conclusion }} = 'success' ] then;
+            exit 1
+          else
+            echo "Continuing"
+          fi
 
       - name: Install dependencies
         run: |

@@ -4,7 +4,8 @@
 > A minimal, no-JavaScript theme for the [Hugo][hugo] static site generator. \
 > Check out the demo at <https://nextredo.github.io/brojs>
 
-![broJS theme screenshot][brojs-sc]
+![broJS theme screenshot][brojs-sc-raw]
+This may be blank on bad CI/CD runs. Check [here][brojs-sc] if it is.
 
 ## Credit
 This repo is based off the "noJS" theme by Andy Sukowski-Bang. \
@@ -111,7 +112,8 @@ This theme is released under [the MIT License][mit-license].
 <!-- ## Internal -->
 [hugo]: https://gohugo.io/
 [brojs]: https://nextredo.github.io/brojs/
-[brojs-sc]: https://github.com/nextredo/brojs/raw/gh-pages/images/screenshot.png
+[brojs-sc]: https://github.com/nextredo/brojs/blob/gh-pages/images/screenshot.png
+[brojs-sc-raw]: https://github.com/nextredo/brojs/raw/gh-pages/images/screenshot.png
 [syntax.css]: ./assets/css/syntax.css
 [head.html]: ./layouts/_partials/head.html
 [rpt.html]: ./layouts/_markup/render-passthrough.html
