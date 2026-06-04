@@ -45,6 +45,9 @@ copyright = "© MIT License"
 [params]
   repo_url = "https://github.com/nextredo/brojs"
 
+  [params.footer]
+    made_with_statement = true
+
   # Supplementary copyright license information
   [params.license]
     # Important to *NOT* have a leading "/" in the image path

@@ -1,15 +1,23 @@
 <div class="footer-content">
-  <!-- TODO add "powered by" statement -->
-  <div>
+  <span>
     {{ with .Site.Copyright }}
       <a href="{{ "LICENSE" | relURL }}">{{ . }}</a>
     {{ end }}
     {{ with $.Site.Params.license.image }}
       <img class="footer-image" src="{{ . | relURL }}"/>
     {{ end }}
-  </div>
-  {{ with .Site.Params.repo_url }}
-    <a href="{{ . }}">This website's code</a>
+  </span>
+  {{ if eq .Site.Params.footer.made_with_statement true }}
+    <span>
+      Made with
+      <a href="https://gohugo.io/?utm_source=brojs" rel="noopener" target="_blank">Hugo</a>
+      &
+      {{ with .Site.Params.repo_url }}
+        <span>
+          <a href="{{ . }}" rel="noopener" target="_blank">broJS</a>
+        </span>
+      {{ end }}
+    </span>
   {{ end }}
-  <div>Site last updated: {{ .Site.Lastmod | time.Format ":date_medium" }}</div>
+  <span>Site last updated: {{ .Site.Lastmod | time.Format ":date_medium" }}</span>
 </div>
