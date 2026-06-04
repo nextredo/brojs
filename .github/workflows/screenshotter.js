@@ -16,7 +16,7 @@ const website  = args[1];
 console.log("Got args");
 
 // Main
-const main = async () => {
+(async () => {
   console.log("Starting");
 
   // Puppeteer setup
@@ -38,20 +38,10 @@ const main = async () => {
 
   await browser.close();
   console.log("Ending");
-};
-
-// Run main
-try {
-  await main().then((result) => {
-    console.log("Succeeded:", result);
-    process.exit(0);
-  }).catch((error) => {
-    console.error("Failed:", error);
-    process.exit(1);
-  });
-} catch (error) {
-  console.error("Error thrown:", error);
+})().then((result) => {
+  console.log("Succeeded:", result);
+  process.exit(0);
+}).catch((error) => {
+  console.error("Failed:", error);
   process.exit(1);
-}
-
-
+});
