@@ -1,7 +1,7 @@
 name: Post Deployment Tasks
 
 on:
-  deployment:
+  deploy:
 
 jobs:
   after-deploy:
@@ -21,7 +21,7 @@ jobs:
       - name: Wait
         run: |
           # Sleep to allow the site to get published
-          sleep 120
+          sleep 90
 
       - name: Stats on Deployment
         run: |

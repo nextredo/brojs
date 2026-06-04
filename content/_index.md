@@ -5,7 +5,7 @@ draft = false
 +++
 
 ```
-Home 🦀
+Home 🦀🧙‍♂️
 
 -----------------------------
 ⚠️ | Under construction | ⚠️
