@@ -1,7 +1,7 @@
 name: Post Deployment Tasks
 
 on:
-  deployment_status:
+  deployment:
 
 jobs:
   after-deploy:
@@ -11,16 +11,23 @@ jobs:
         shell: bash -x {0} # Print commands before execution
 
     # Only run if the deployment was successful and matches the GitHub Pages environment
-    if: github.event.deployment_status.state == 'success' && github.event.deployment.environment == 'github-pages'
+    # if: github.event.deployment_status.state == 'success' && github.event.deployment.environment == 'github-pages'
     steps:
       - uses: actions/checkout@v4
         with:
           submodules: true
           fetch-depth: 0
 
-      - name: Use Deployed Live URL
+      - name: Wait
+        run: |
+          # Sleep to allow the site to get published
+          sleep 120
+
+      - name: Stats on Deployment
         run: |
           echo "The website is live at: ${{ github.event.deployment_status.environment_url }}"
+          echo "${{ github.event.deployment_status.state }}
+          echo "${{ github.event.deployment.environment }}"
           # Insert tasks here (e.g., curl, Lighthouse audits, Cypress tests)
 
       - name: Install dependencies

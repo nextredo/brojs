@@ -8,7 +8,7 @@
 # https://github.com/peaceiris/actions-hugo
 # https://github.com/peaceiris/actions-gh-pages
 
-name: GitHub Pages
+name: GitHub Pages Hugo Build
 
 on:
   push:
@@ -31,8 +31,8 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
-          submodules: true  # Fetch Hugo themes (true OR recursive)
-          fetch-depth: 0    # Fetch history for Hugo .GitInfo usage
+          submodules: true # Fetch Hugo themes (true OR recursive)
+          fetch-depth: 0   # Fetch history for Hugo .GitInfo usage
 
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v3
