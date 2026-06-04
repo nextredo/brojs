@@ -31,9 +31,9 @@ jobs:
 
           # Quit if deployment failed
           if [ "${{ github.event.workflow_run.conclusion }}" = "success" ]; then
-            exit 1
-          else
             echo "Continuing"
+          else
+            exit 1
           fi
 
       - name: Install dependencies
