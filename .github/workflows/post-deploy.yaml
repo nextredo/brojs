@@ -23,25 +23,18 @@ jobs:
           submodules: true
           fetch-depth: 0
 
-      - name: Wait
-        run: |
-          # Unnecessary sleep to allow site to fully update
-          sleep 20
-
       - name: To proceed or not to proceed?
         # TODO this instead vv
-        # if: ${{ github.event.workflow_run.conclusion }} == 'success'
+        if: ${{ github.event.workflow_run.conclusion }} == 'success'
         run: |
-          echo "Pages deployment finished with: ${{ github.event.workflow_run.conclusion }}"
+          sleep 5
 
-          # Quit if deployment failed
-          if [ "${{ github.event.workflow_run.conclusion }}" = "success" ]; then
-            echo "Continuing"
-          else
-            exit 1
-          fi
+      - name: Wait a little for site update
+        run: |
+          # Unnecessary sleep to allow site to fully update
+          sleep 15
 
-      - name: Install dependencies
+      - name: Install node, npm
         run: |
           # Install dependencies
           sudo apt-get update
@@ -50,21 +43,24 @@ jobs:
 
       - name: Install Puppeteer
         run: |
-          # Setup work dir, install Puppeteer
-          # Puppeteer automatically installs a chromium version to use
+          # Setup work dir
           mkdir /tmp/shotter
           cd /tmp/shotter
+
+          # Install Puppeteer
+          # Puppeteer automatically installs a chromium version to use
           npm init -y
           npm install puppeteer
           sleep 2
 
       - name: Generate homepage screenshot
         run: |
+          cd /tmp/shotter
+
           # Get the runner from the primary branch
           cp ${{ github.workspace }}/.github/workflows/screenshotter.js /tmp/shotter/
 
           # Run the screenshotter, now that the website has been published
-          cd /tmp/shotter
           node ./screenshotter.js ${{ github.workspace }} "https://nextredo.github.io/brojs/"
           sleep 2
 
@@ -73,10 +69,11 @@ jobs:
           cd ${{ github.workspace }}
 
           # Setup git
-          git config --local user.name "${{ github.triggering_actor }}"
-          git config --local user.email "${{ github.triggering_actor }}@users.noreply.github.com"
+          git checkout gh-pages
+          git config --local user.name "${{ github.actor }}"
+          git config --local user.email "${{ github.actor }}@users.noreply.github.com"
           git add ./images/screenshot.png
 
           # Commit if changes exist
-          git diff-index --quiet HEAD || git commit -m "Screenshot update"
+          git diff-index --quiet HEAD || git commit -m "ci: post deploy update"
           git push
