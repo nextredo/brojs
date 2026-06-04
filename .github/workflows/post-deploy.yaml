@@ -3,7 +3,7 @@ name: Post Deployment Tasks
 on:
   workflow_run:
     # Match GitHub pages inbuilt action
-    workflows: ["pages build and deployment"]
+    workflows: ["pages-build-deployment"]
     types: [completed]
 
 jobs:

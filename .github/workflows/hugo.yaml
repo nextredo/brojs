@@ -8,7 +8,7 @@
 # https://github.com/peaceiris/actions-hugo
 # https://github.com/peaceiris/actions-gh-pages
 
-name: GitHub Pages
+name: hugo-deploy-to-branch
 
 on:
   push:
