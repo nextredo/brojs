@@ -17,6 +17,8 @@ draft = false
 > Find this website's code in [this repository][brojs-repo].
 
 ### Mystical emojis
+> In no particular order...
+
 | 🌌 | 🕷️ | 🧞 | 🧚 | 🗡️ |
 | -- | -- | -- | -- | -- |
 | 🪽 | 👑 | 🔮 | 🐉 | 🧝‍♂️ |

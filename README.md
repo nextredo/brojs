@@ -5,14 +5,14 @@
 > Check out the demo at <https://nextredo.github.io/brojs>
 
 ![broJS theme screenshot - light mode][brojs-sc-raw-light] \
-![broJS theme screenshot - dark mode][brojs-sc-raw-dark]
-This may be blank on bad CI/CD runs. See the latest actions [here][brojs-actions].
-Check [here][brojs-sc] if it is.
+![broJS theme screenshot - dark mode][brojs-sc-raw-dark] \
+These screenshots may be blank on bad CI/CD runs.
+See the latest actions [here][brojs-actions], or check the [screenshot folder][brojs-sc-folder].
 
 ## Credit
-This repo is based off the "noJS" theme by Andy Sukowski-Bang. \
-Find that theme here: <https://gitlab.com/andy.sb/nojs> \
-Find a demo of that theme here: <https://nojs.andy.sb>
+This repo is based off the "noJS" theme by Andy Sukowski-Bang.
+- noJS repo: <https://gitlab.com/andy.sb/nojs>
+- noJS demo: <https://nojs.andy.sb>
 
 ## Feature Summary
 * no JavaScript
@@ -54,9 +54,6 @@ Add menu entries:
 
 ## Development
 ```bash
-# We want to build the example site
-cd exampleSite
-
 # Flags are optional, but useful
 hugo server --buildDrafts --cleanDestinationDir \
     --disableFastRender --noHTTPCache --logLevel info
@@ -117,6 +114,7 @@ This theme is released under [the MIT License][mit-license].
 <!-- ## Internal -->
 [hugo]: https://gohugo.io/
 [brojs]: https://nextredo.github.io/brojs/
+[brojs-sc-folder]: https://github.com/nextredo/brojs/blob/gh-pages/images/cicd/
 [brojs-sc-light]: https://github.com/nextredo/brojs/blob/gh-pages/images/cicd/sc-light.png
 [brojs-sc-dark]: https://github.com/nextredo/brojs/blob/gh-pages/images/cicd/sc-dark.png
 [brojs-sc-raw-light]: https://github.com/nextredo/brojs/raw/gh-pages/images/cicd/sc-light.png
