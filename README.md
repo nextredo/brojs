@@ -54,6 +54,9 @@ Add menu entries:
 
 ## Development
 ```bash
+# We want to build the example site
+cd exampleSite
+
 # Flags are optional, but useful
 hugo server --buildDrafts --cleanDestinationDir \
     --disableFastRender --noHTTPCache --logLevel info

@@ -2,6 +2,12 @@
 baseURL = "https://nextredo.github.io/brojs/"
 title = "broJS Hugo Theme"
 
+# Ensure this demo site works properly
+# More info here:
+# https://www.jakewiesler.com/blog/turn-your-hugo-website-into-a-theme
+theme = "brojs"
+themesDir = "../.."
+
 # Copyright notice to show at the bottom of the page
 # copyright = "© 2026. All rights reserved."
 copyright = "© MIT License"
@@ -11,7 +17,6 @@ copyright = "© MIT License"
     extended = false
     min = "0.146.0"
 
-  # TODO these are causing problems when this repo is used as a theme
   # Explicitly keep existing static dir mount
   [[module.mounts]]
     source = "static"
@@ -19,7 +24,7 @@ copyright = "© MIT License"
 
   # Mount LICENSE file
   [[module.mounts]]
-    source = "LICENSE"
+    source = "../LICENSE"
     target = "static/LICENSE"
 
 [menus]

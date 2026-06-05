@@ -1,9 +1,12 @@
-# Hugo build files
-/public/
-/resources/_gen/
-/assets/jsconfig.json
+# Hugo build files (auto-generated)
+public/
+resources/_gen/
+assets/jsconfig.json
 hugo_stats.json
-/.hugo_build.lock
+.hugo_build.lock
+
+# Other build files
+builds
 
 # Possible hugo executable that gets added
 hugo.exe
@@ -13,4 +16,15 @@ hugo.linux
 # Editor tings
 .vscode/
 *.swp
+.env*
+*.lock
 *~
+
+# Other
+Thumbs.db
+.DS_Store
+.dist
+.tmp
+.lock
+.sass-cache
+go.sum

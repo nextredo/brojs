@@ -8,6 +8,14 @@
 - [ ] Use tidbits from `hugo new theme my-theme` generated files
 - [ ] Navigation bar wrapping
   - If any of the text in the navbar starts to wrap, swap to using the burger menu
+- [ ] Use taxonomies instead of a special tags page
+
+```
+[taxonomies]
+    category = "categories"
+    tag = "tags"
+    author = "authors"
+```
 
 ## Customisation / Theming
 - [ ] Customisable favicon in theme
