@@ -64,7 +64,7 @@ jobs:
           mkdir -p "./images/cicd/"
 
           # Checkout the pages branch, so changed files are on this branch
-          git checkout gh-pages
+          git checkout ci-branch
 
           # Move back to the temporary project directory
           cd /tmp/shotter
@@ -79,7 +79,7 @@ jobs:
           cd ${{ github.workspace }}
 
           # Setup git
-          git checkout gh-pages
+          git checkout ci-branch
           git config --local user.name "${{ github.actor }}"
           git config --local user.email "${{ github.actor }}@users.noreply.github.com"
           git add ./images/cicd/

@@ -31,5 +31,5 @@ draft = false
 
 <!-- Links -->
 [brojs-repo]: https://github.com/nextredo/brojs
-[brojs-sc-raw-light]: https://github.com/nextredo/brojs/raw/gh-pages/images/cicd/sc-light.png
-[brojs-sc-raw-dark]: https://github.com/nextredo/brojs/raw/gh-pages/images/cicd/sc-dark.png
+[brojs-sc-raw-light]: https://github.com/nextredo/brojs/raw/ci-branch/images/cicd/sc-light.png
+[brojs-sc-raw-dark]: https://github.com/nextredo/brojs/raw/ci-branch/images/cicd/sc-dark.png

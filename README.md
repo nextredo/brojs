@@ -6,7 +6,7 @@
 
 ![broJS theme screenshot - light mode][brojs-sc-raw-light] \
 ![broJS theme screenshot - dark mode][brojs-sc-raw-dark] \
-These screenshots may be blank on bad CI/CD runs.
+These screenshots may be blank/missing on bad CI/CD runs.
 See the latest actions [here][brojs-actions], or check the [screenshot folder][brojs-sc-folder].
 
 ## Credit
@@ -114,11 +114,11 @@ This theme is released under [the MIT License][mit-license].
 <!-- ## Internal -->
 [hugo]: https://gohugo.io/
 [brojs]: https://nextredo.github.io/brojs/
-[brojs-sc-folder]: https://github.com/nextredo/brojs/blob/gh-pages/images/cicd/
-[brojs-sc-light]: https://github.com/nextredo/brojs/blob/gh-pages/images/cicd/sc-light.png
-[brojs-sc-dark]: https://github.com/nextredo/brojs/blob/gh-pages/images/cicd/sc-dark.png
-[brojs-sc-raw-light]: https://github.com/nextredo/brojs/raw/gh-pages/images/cicd/sc-light.png
-[brojs-sc-raw-dark]: https://github.com/nextredo/brojs/raw/gh-pages/images/cicd/sc-dark.png
+[brojs-sc-folder]: https://github.com/nextredo/brojs/blob/ci-branch/images/cicd/
+[brojs-sc-light]: https://github.com/nextredo/brojs/blob/ci-branch/images/cicd/sc-light.png
+[brojs-sc-dark]: https://github.com/nextredo/brojs/blob/ci-branch/images/cicd/sc-dark.png
+[brojs-sc-raw-light]: https://github.com/nextredo/brojs/raw/ci-branch/images/cicd/sc-light.png
+[brojs-sc-raw-dark]: https://github.com/nextredo/brojs/raw/ci-branch/images/cicd/sc-dark.png
 [brojs-actions]: https://github.com/nextredo/brojs/actions
 [syntax.css]: ./assets/css/syntax.css
 [head.html]: ./layouts/_partials/head.html
