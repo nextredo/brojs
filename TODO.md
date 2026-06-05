@@ -6,6 +6,8 @@
 - [ ] Move all demo site stuff into the `exampleSite` subdir
   - Probs requires moving `hugo.toml` to the `config` dir
 - [ ] Use tidbits from `hugo new theme my-theme` generated files
+- [ ] Navigation bar wrapping
+  - If any of the text in the navbar starts to wrap, swap to using the burger menu
 
 ## Customisation / Theming
 - [ ] Customisable favicon in theme
