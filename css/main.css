@@ -1,0 +1,192 @@
+/* @import url("vars.css"); */
+
+body {
+  display: flex;
+  min-height: 100dvh;
+  flex-direction: column;
+  margin: 0;
+
+  background-color: var(--bg1);
+  color: var(--fg1);
+  font-family: sans-serif;
+  line-height: 1.5;
+
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+}
+
+header,
+footer,
+thead,
+pre,
+code {
+  background-color: var(--bg2);
+}
+
+.navbar,
+main,
+.footer-content {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  padding-left: 2em;
+  padding-right: 2em;
+  box-sizing: border-box;
+}
+
+main {
+  flex: 1;
+  padding-top: 2em;
+  padding-bottom: 2em;
+}
+
+.footer-content * img {
+  height: 1em;
+  width: auto;
+  vertical-align: text-top;
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+article {
+  margin-top: 2em;
+}
+
+article:not(:last-of-type) {
+  padding-bottom: 2em;
+  border-bottom: solid 1px var(--fg2);
+}
+
+.metadata {
+  margin: 1em 0;
+}
+
+.tags,
+.info {
+  list-style: none;
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: 0.5em;
+  row-gap: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+.tags a {
+  color: var(--fg2);
+  text-decoration: none;
+}
+
+:is(h1, h2, h3, h4, h5, h6) .anchor {
+  visibility: hidden;
+}
+
+:is(h1, h2, h3, h4, h5, h6):hover .anchor {
+  visibility: visible;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+p,
+li {
+  text-align: justify;
+  hyphens: auto;
+}
+
+a {
+  color: var(--link);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+pre code {
+  padding: 0;
+}
+
+code {
+  padding: 0.2em 0.3em;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td,
+th {
+  border: solid 1px;
+}
+
+td,
+th {
+  padding: 0.25em;
+}
+
+pre {
+  padding: 1em;
+}
+
+pre,
+.katex {
+  overflow: auto;
+}
+
+figure {
+  margin: 0;
+}
+
+img {
+  max-width: 100%;
+}
+
+figcaption {
+  margin-top: 1em;
+  color: var(--fg2);
+  text-align: center;
+}
+
+details {
+  cursor: pointer;
+}
+
+aside {
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+hr {
+  border: none;
+  border-top-style: dotted;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Hugo automatically assigns
+the below ID to the TOC element */
+#TableOfContents ul {
+  font-style: italic;
+  list-style-type: none;
+  padding-left: 1em;
+  padding-top: 0em;
+  margin-top: 0em;
+  margin-bottom: 0em;
+}
+
+#TableOfContents li a {
+  text-decoration: none;
+}
