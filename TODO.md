@@ -9,6 +9,7 @@
 - [ ] Navigation bar wrapping
   - If any of the text in the navbar starts to wrap, swap to using the burger menu
 - [ ] Use taxonomies instead of a special tags page
+- [ ] Robots.txt stuff
 
 ```
 [taxonomies]
