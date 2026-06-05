@@ -8,6 +8,7 @@ copyright = "© MIT License"
 
 [module]
   [module.hugoVersion]
+    extended = false
     min = "0.146.0"
 
   # Explicitly keep existing static dir mount
@@ -24,22 +25,22 @@ copyright = "© MIT License"
   [[menus.main]]
     name = 'Home'
     pageRef = '/'
-    weight = 1
+    weight = 10
 
   [[menus.main]]
     name = 'Posts'
     pageRef = '/posts'
-    weight = 2
+    weight = 20
 
   [[menus.main]]
     name = 'Tags'
     pageRef = '/tags'
-    weight = 3
+    weight = 30
 
   [[menus.main]]
     name = "About"
     pageRef = "/about"
-    weight = 4
+    weight = 40
 
 # Custom parameters
 [params]
