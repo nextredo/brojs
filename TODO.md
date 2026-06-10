@@ -2,6 +2,7 @@
 - [ ] N/A
 
 ## Other
+- [ ] Add my custom readme 404 image to "can't find" pages in this theme
 - [ ] `go.mod` file so it can be used as a Hugo module
 - [ ] Move all demo site stuff into the `exampleSite` subdir
   - Probs requires moving `hugo.toml` to the `config` dir

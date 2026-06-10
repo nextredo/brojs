@@ -1,8 +1,8 @@
 # broJS Hugo theme
-
 > [!NOTE]
-> A minimal, no-JavaScript theme for the [Hugo][hugo] static site generator. \
-> Check out the demo at <https://nextredo.github.io/brojs>
+> A minimal, no-JavaScript theme for the [Hugo][hugo] static site generator.
+> - Check out the demo at <https://nextredo.github.io/brojs>
+> - You can also check out my personal site, which doubles as a demo, at <https://nextredo.github.io>
 
 ![broJS theme screenshot - light mode][brojs-sc-raw-light] \
 ![broJS theme screenshot - dark mode][brojs-sc-raw-dark] \
@@ -15,42 +15,45 @@ This repo is based off the "noJS" theme by Andy Sukowski-Bang.
 - noJS demo: <https://nojs.andy.sb>
 
 ## Feature Summary
-* no JavaScript
-* dark mode via [`prefers-color-scheme`][prefers-color-scheme]
-* [syntax highlighting](#syntax-highlighting)
-* [LaTeX via `transform.ToMath`](#latex-via-transformtomath)
+- No JavaScript
+- Dark mode via [`prefers-color-scheme`][prefers-color-scheme]
+- [syntax highlighting](#syntax-highlighting)
+- [LaTeX via `transform.ToMath`](#latex-via-transformtomath)
 
 ## Installation
 For more information read the official [quick start guide][hugo-quickstart] of Hugo.
-
-In your `themes/` directory, run:
+1. In your `themes/` directory, run:
 ```sh
 git clone https://github.com/nextredo/brojs.git
 ```
 
-Set the theme in `hugo.toml` at the base of the Hugo site:
+2. Set the theme in `hugo.toml` at the base of the Hugo site:
 ```toml
 theme = "brojs"
 ```
 
-Add menu entries:
+3. Add some menu entries:
 ```toml
 [menus]
   [[menus.main]]
     name = 'Home'
     pageRef = '/'
-    weight = 1
+    weight = 10
 
   [[menus.main]]
     name = 'Posts'
     pageRef = '/posts'
-    weight = 2
+    weight = 20
 
   [[menus.main]]
     name = 'Tags'
     pageRef = '/tags'
-    weight = 3
+    weight = 30
 ```
+
+4. Configure the custom parameters (seen in action [here][example-toml])
+
+<https://github.com/nextredo/brojs/blob/main/exampleSite/hugo.toml#L1>
 
 ## Development
 ```bash
@@ -67,12 +70,6 @@ random site glitches, such as the following:
 1. The "Tags" menu item is now broken (after a partial rebuild)
 
 ## Features
-### Image captions
-You can add captions to images (technically using `<figcaption>` HTML tags) by adding titles, like so:
-```md
-![Alt text here](/path/to/image.png "Put your caption here!")
-```
-
 ### Syntax highlighting
 Disable [`noClasses`][hugo-syntax-highlighting] to use [this modified algol_nu theme][syntax.css].
 ```toml
@@ -120,6 +117,7 @@ This theme is released under [the MIT License][mit-license].
 [brojs-sc-raw-light]: https://github.com/nextredo/brojs/raw/ci-branch/images/cicd/sc-light.png
 [brojs-sc-raw-dark]: https://github.com/nextredo/brojs/raw/ci-branch/images/cicd/sc-dark.png
 [brojs-actions]: https://github.com/nextredo/brojs/actions
+[example-toml]: ./exampleSite/hugo.toml
 [syntax.css]: ./assets/css/syntax.css
 [head.html]: ./layouts/_partials/head.html
 [rpt.html]: ./layouts/_markup/render-passthrough.html
